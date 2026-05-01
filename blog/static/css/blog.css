@@ -1,0 +1,62 @@
+.blog-content {
+  color: #d4d4d8;
+  font-size: 18px;
+  line-height: 1.8;
+}
+.blog-content h2,
+.blog-content h3 {
+  color: #ffffff;
+  font-family: 'Space Grotesk', sans-serif;
+  margin-top: 2.25rem;
+  margin-bottom: 1rem;
+}
+.blog-content h2 { font-size: 2rem; line-height: 1.2; }
+.blog-content h3 { font-size: 1.5rem; line-height: 1.3; }
+.blog-content p { margin-bottom: 1.25rem; }
+.blog-content a { color: #a9c7ff; text-decoration: underline; text-underline-offset: 4px; }
+.blog-content ul,
+.blog-content ol { margin: 1rem 0 1.5rem 1.5rem; }
+.blog-content li { margin-bottom: .65rem; }
+.blog-content blockquote {
+  border-left: 4px solid #83cfff;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 1rem 1.25rem;
+  border-radius: .5rem;
+  color: #e5e2e1;
+  margin: 2rem 0;
+}
+.blog-content code {
+  background: #201f1f;
+  color: #83cfff;
+  border: 1px solid rgba(255, 255, 255, .08);
+  border-radius: .35rem;
+  padding: .15rem .4rem;
+  font-size: .9em;
+}
+.blog-content pre {
+  background: #0e0e0e;
+  border: 1px solid rgba(255, 255, 255, .1);
+  border-radius: .75rem;
+  padding: 1.25rem;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+}
+.blog-content pre code {
+  background: transparent;
+  border: 0;
+  padding: 0;
+}
+.blog-content img {
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, .1);
+}
+.brand-logo {
+  height: 40px;
+  width: 40px;
+  object-fit: contain;
+}
+.footer-logo {
+  height: 36px;
+  width: 36px;
+  object-fit: contain;
+}

@@ -1,0 +1,242 @@
+﻿<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta name="description" content="Southern IoT product catalog for industrial IoT, automation, CNC machines, and embedded tools."/>
+  <title>Products | Southern IoT</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <script>
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        "primary-container": "#002b5b",
+        "on-secondary": "#00344b",
+        "surface-bright": "#393939",
+        "tertiary-fixed": "#dfe3e7",
+        "tertiary": "#c3c7cb",
+        "surface-container-highest": "#353534",
+        "on-secondary-fixed-variant": "#004c6b",
+        "inverse-surface": "#e5e2e1",
+        "on-surface-variant": "#c4c6d0",
+        "on-primary": "#073060",
+        "background": "#131313",
+        "primary-fixed-dim": "#a9c7ff",
+        "on-tertiary-container": "#8f9397",
+        "secondary-fixed": "#c6e7ff",
+        "on-tertiary-fixed-variant": "#43474b",
+        "surface-container-low": "#1c1b1b",
+        "outline-variant": "#43474f",
+        "inverse-primary": "#405f91",
+        "surface-container-high": "#2a2a2a",
+        "surface-variant": "#353534",
+        "surface-dim": "#131313",
+        "tertiary-container": "#272c2f",
+        "tertiary-fixed-dim": "#c3c7cb",
+        "primary": "#a9c7ff",
+        "on-secondary-fixed": "#001e2d",
+        "error-container": "#93000a",
+        "error": "#ffb4ab",
+        "secondary-fixed-dim": "#83cfff",
+        "secondary": "#83cfff",
+        "on-background": "#e5e2e1",
+        "primary-fixed": "#d6e3ff",
+        "on-tertiary-fixed": "#171c1f",
+        "on-surface": "#e5e2e1",
+        "on-primary-container": "#7594ca",
+        "surface-tint": "#a9c7ff",
+        "surface-container-lowest": "#0e0e0e",
+        "outline": "#8d909a",
+        "surface": "#131313",
+        "surface-container": "#201f1f",
+        "on-tertiary": "#2c3134",
+        "on-error-container": "#ffdad6",
+        "on-primary-fixed-variant": "#264778",
+        "on-error": "#690005",
+        "inverse-on-surface": "#313030",
+        "secondary-container": "#03a8e8",
+        "on-secondary-container": "#003952",
+        "on-primary-fixed": "#001b3d"
+      },
+      borderRadius: { DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px" },
+      spacing: { gutter: "24px", md: "16px", xxl: "48px", sm: "8px", xl: "32px", "container-max": "1440px", xs: "4px", unit: "8px", lg: "24px" },
+      fontFamily: { "headline-md": ["Space Grotesk"], "body-lg": ["Inter"], "body-sm": ["Inter"], "label-caps": ["Inter"], "headline-lg": ["Space Grotesk"], "display": ["Space Grotesk"], "body-md": ["Inter"] },
+      fontSize: {
+        "headline-md": ["24px", {lineHeight: "1.3", fontWeight: "600"}],
+        "body-lg": ["18px", {lineHeight: "1.6", fontWeight: "400"}],
+        "body-sm": ["14px", {lineHeight: "1.5", fontWeight: "400"}],
+        "label-caps": ["12px", {lineHeight: "1", letterSpacing: "0.08em", fontWeight: "700"}],
+        "headline-lg": ["32px", {lineHeight: "1.2", fontWeight: "600"}],
+        "display": ["48px", {lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700"}],
+        "body-md": ["16px", {lineHeight: "1.5", fontWeight: "400"}]
+      }
+    }
+  }
+}
+</script>
+  <link rel="stylesheet" href="../css/shared.css"/>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary/30 industrial-grid min-h-screen flex flex-col">
+<nav class="fixed top-0 w-full z-50 border-b bg-slate-950/80 backdrop-blur-md border-white/10 shadow-[0_4px_20px_rgba(0,43,91,0.3)]">
+  <div class="nav-shell flex items-center justify-between px-6 md:px-8 py-4 max-w-screen-2xl mx-auto">
+    <a class="flex items-center gap-3 text-white font-['Space_Grotesk']" href="../"><img class="brand-logo" src="../assets/images/slogo.png" alt="Southern IoT logo"/><span class="text-xl md:text-2xl font-bold tracking-tighter">Southern IoT</span></a>
+    <div class="hidden md:flex items-center gap-5 lg:gap-8 font-['Space_Grotesk'] text-sm font-medium tracking-wide">
+      <a class="text-slate-400 hover:text-white transition-colors duration-200 hover:bg-white/5 rounded-md px-3 py-2" href="../">Home</a><a class="text-slate-400 hover:text-white transition-colors duration-200 hover:bg-white/5 rounded-md px-3 py-2" href="../about/">About</a><a class="text-slate-400 hover:text-white transition-colors duration-200 hover:bg-white/5 rounded-md px-3 py-2" href="../solutions/">Solutions</a><a class="text-blue-400 border-b-2 border-blue-500 pb-1" href="../products/">Products</a><a class="text-slate-400 hover:text-white transition-colors duration-200 hover:bg-white/5 rounded-md px-3 py-2" href="../ecosystem/">Ecosystem</a><a class="text-slate-400 hover:text-white transition-colors duration-200 hover:bg-white/5 rounded-md px-3 py-2" href="../blog/">Blog</a><a class="text-slate-400 hover:text-white transition-colors duration-200 hover:bg-white/5 rounded-md px-3 py-2" href="../support/">Support</a>
+    </div>
+    <div class="flex items-center gap-3">
+      <div class="hidden lg:flex items-center gap-3 text-slate-400" aria-hidden="true">
+        <span class="material-symbols-outlined text-xl">language</span>
+        <span class="material-symbols-outlined text-xl">dark_mode</span>
+      </div>
+      <a class="hidden sm:inline-flex bg-primary-container text-white px-5 py-2 rounded-lg font-headline-md text-sm active:scale-95 transform transition-transform hover:shadow-[0_0_15px_rgba(3,168,232,0.4)]" href="../support/">Get Started</a>
+      <button id="mobile-menu-btn" class="md:hidden glass-panel rounded-lg p-2 text-white" aria-label="Toggle navigation">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+    </div>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden flex-col gap-1 px-6 pb-6 font-['Space_Grotesk'] text-sm bg-slate-950/95 border-t border-white/10">
+    <a class="text-slate-300 px-4 py-3 rounded-lg hover:bg-white/5" href="../">Home</a><a class="text-slate-300 px-4 py-3 rounded-lg hover:bg-white/5" href="../about/">About</a><a class="text-slate-300 px-4 py-3 rounded-lg hover:bg-white/5" href="../solutions/">Solutions</a><a class="text-blue-400 px-4 py-3 rounded-lg hover:bg-white/5" href="../products/">Products</a><a class="text-slate-300 px-4 py-3 rounded-lg hover:bg-white/5" href="../ecosystem/">Ecosystem</a><a class="text-slate-300 px-4 py-3 rounded-lg hover:bg-white/5" href="../blog/">Blog</a><a class="text-slate-300 px-4 py-3 rounded-lg hover:bg-white/5" href="../support/">Support</a>
+    <a class="mt-2 bg-primary-container text-white px-4 py-3 rounded-lg text-center" href="../support/">Get Started</a>
+  </div>
+</nav>
+<main class="flex-grow pt-32 pb-24">
+  <section class="max-w-screen-2xl mx-auto px-8 mb-20">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <div class="lg:col-span-7">
+        <span class="font-label-caps text-primary mb-4 block">Southern IoT Product Portfolio</span>
+        <h1 class="font-display text-5xl md:text-display text-white mb-6">Products organized for real deployments</h1>
+        <p class="font-body-lg text-on-surface-variant max-w-3xl mb-8">From industrial energy telemetry to building automation, CNC fabrication, and embedded test instruments, Southern IoT products are built around one motto: communication for all.</p>
+        <div class="flex flex-wrap gap-4">
+          <a class="bg-secondary-container text-on-secondary-container px-8 py-4 rounded-xl font-headline-md flex items-center gap-3" href="#catalog">Explore Catalog <span class="material-symbols-outlined">inventory_2</span></a>
+          <a class="glass-panel text-white px-8 py-4 rounded-xl font-headline-md flex items-center gap-3" href="../support/">Discuss a Build <span class="material-symbols-outlined">support_agent</span></a>
+        </div>
+      </div>
+      <div class="lg:col-span-5">
+        <div class="glass-panel rounded-[2rem] p-2 overflow-hidden">
+          <img class="w-full rounded-2xl object-cover aspect-[4/3]" src="../assets/images/home-assistant.png" alt="Southern IoT automation product installation"/>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="max-w-screen-2xl mx-auto px-8 mb-20">
+    <div class="grid grid-cols-2 lg:grid-cols-5 gap-6">
+      <div class="glass-panel rounded-2xl p-6"><div class="font-display text-3xl text-white">6</div><p class="font-label-caps text-primary mt-3">Product Lines</p></div>
+      <div class="glass-panel rounded-2xl p-6"><div class="font-display text-3xl text-white">12+</div><p class="font-label-caps text-primary mt-3">Energy Metrics</p></div>
+      <div class="glass-panel rounded-2xl p-6"><div class="font-display text-3xl text-white">10 km</div><p class="font-label-caps text-primary mt-3">LoRaWAN Range</p></div>
+      <div class="glass-panel rounded-2xl p-6"><div class="font-display text-3xl text-white">&lt;50ms</div><p class="font-label-caps text-primary mt-3">Automation Latency</p></div>
+      <div class="glass-panel rounded-2xl p-6"><div class="font-display text-3xl text-white">IP65</div><p class="font-label-caps text-primary mt-3">Field Enclosure</p></div>
+    </div>
+  </section>
+
+  <section id="catalog" class="max-w-screen-2xl mx-auto px-8 mb-24">
+    <div class="mb-12"><span class="font-label-caps text-primary">Catalog</span><h2 class="font-headline-lg text-white mt-3">Connected products and machines</h2></div>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <article class="glass-panel rounded-2xl p-8 glow-hover transition-all">
+        <div class="flex items-start justify-between gap-6 mb-6"><div><span class="font-label-caps text-secondary">Industrial IoT</span><h3 class="font-headline-lg text-white mt-3">CareFlow V1 IIoT Energy Monitor</h3></div><span class="material-symbols-outlined text-primary text-4xl">energy_savings_leaf</span></div>
+        <p class="text-on-surface-variant mb-6">Industrial-grade generator performance monitoring and power-line stability analysis for harsh environments. Built with RAK3172 LoRaWAN, ESP32 processing, Modbus RTU, RS485/RS232 interfaces, and a hardened PCB.</p>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6 text-sm"><div><p class="font-label-caps text-primary">Protocol</p><p>Modbus RTU</p></div><div><p class="font-label-caps text-primary">Range</p><p>10 km</p></div><div><p class="font-label-caps text-primary">Metrics</p><p>12+</p></div><div><p class="font-label-caps text-primary">Buffer</p><p>72h</p></div></div>
+        <div class="flex flex-wrap gap-3"><a class="text-primary font-semibold" href="https://careflow-v1.julfikerhaider2001.workers.dev/#enclosure" target="_blank" rel="noopener">Live documentation</a><a class="text-primary font-semibold" href="../assets/docs/careflow-v1-iiot-energy-monitor.html">Local HTML</a><a class="text-primary font-semibold" href="../assets/models/new-enclosure-design.stl">STL enclosure</a></div>
+      </article>
+
+      <article class="glass-panel rounded-2xl overflow-hidden glow-hover transition-all">
+        <img class="w-full aspect-video object-cover" src="../assets/images/home-assistant.png" alt="Multi-zone home automation hardware"/>
+        <div class="p-8"><span class="font-label-caps text-secondary">Automation</span><h3 class="font-headline-lg text-white mt-3 mb-4">Multi-Zone Home Automation</h3><p class="text-on-surface-variant mb-6">Modular home and office automation infrastructure using ESP32, ESP8266, ESPHome, YAML automations, and Home Assistant for synchronized physical and digital control.</p><div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6 text-sm"><div><p class="font-label-caps text-primary">Zones</p><p>3</p></div><div><p class="font-label-caps text-primary">Nodes</p><p>5+</p></div><div><p class="font-label-caps text-primary">Protocol</p><p>ESPHome</p></div><div><p class="font-label-caps text-primary">Latency</p><p>&lt;50 ms</p></div></div><a class="text-primary font-semibold" href="https://home-automation.julfikerhaider2001.workers.dev" target="_blank" rel="noopener">Live documentation</a></div>
+      </article>
+
+      <article class="glass-panel rounded-2xl overflow-hidden glow-hover transition-all">
+        <img class="w-full aspect-video object-cover bg-white" src="../assets/images/topscnc.png" alt="Router CNC machine assembly"/>
+        <div class="p-8"><span class="font-label-caps text-secondary">Manufacturing</span><h3 class="font-headline-lg text-white mt-3 mb-4">Router CNC Machine</h3><p class="text-on-surface-variant mb-6">Custom rigid-frame CNC platform for precision routing, prototyping, and fabrication with high-torque stepper motors, calibrated motion, and reduced vibration.</p><div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6 text-sm"><div><p class="font-label-caps text-primary">Motion</p><p>Stepper</p></div><div><p class="font-label-caps text-primary">Control</p><p>Closed-loop</p></div><div><p class="font-label-caps text-primary">Use</p><p>Routing</p></div><div><p class="font-label-caps text-primary">Build</p><p>Custom</p></div></div><a class="text-primary font-semibold" href="../assets/docs/cnc-machine-build.html">Project HTML</a></div>
+      </article>
+
+      <article class="glass-panel rounded-2xl p-8 glow-hover transition-all">
+        <div class="flex items-start justify-between gap-6 mb-6"><div><span class="font-label-caps text-secondary">Manufacturing</span><h3 class="font-headline-lg text-white mt-3">Laser CNC Machine</h3></div><span class="material-symbols-outlined text-primary text-4xl">laser_power</span></div>
+        <p class="text-on-surface-variant mb-6">Laser CNC capability for engraving, panel marking, and precision 2D cutting workflows. Positioned beside Router CNC to cover both subtractive routing and non-contact laser fabrication.</p>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6 text-sm"><div><p class="font-label-caps text-primary">Use</p><p>Engraving</p></div><div><p class="font-label-caps text-primary">Workflow</p><p>Vector</p></div><div><p class="font-label-caps text-primary">Material</p><p>Sheet</p></div><div><p class="font-label-caps text-primary">Safety</p><p>Interlock-ready</p></div></div>
+        <a class="text-primary font-semibold" href="../support/">Request build details</a>
+      </article>
+
+      <article class="glass-panel rounded-2xl p-8 glow-hover transition-all">
+        <div class="flex items-start justify-between gap-6 mb-6"><div><span class="font-label-caps text-secondary">Embedded Tools</span><h3 class="font-headline-lg text-white mt-3">Pocket Oscilloscope v3</h3></div><span class="material-symbols-outlined text-primary text-4xl">monitoring</span></div>
+        <p class="text-on-surface-variant mb-6">Portable embedded oscilloscope based on Raspberry Pi Pico 2, ILI9341 TFT, TP4056 LiPo charging, ADC input, waveform display, hold mode, calibration workflow, and 1 kHz test signal.</p>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6 text-sm"><div><p class="font-label-caps text-primary">MCU</p><p>RP2040</p></div><div><p class="font-label-caps text-primary">Display</p><p>ILI9341</p></div><div><p class="font-label-caps text-primary">Power</p><p>LiPo</p></div><div><p class="font-label-caps text-primary">Code</p><p>C++</p></div></div>
+        <div class="flex flex-wrap gap-3"><a class="text-primary font-semibold" href="../assets/docs/pocket-oscilloscope-v3.html">Project HTML</a><a class="text-primary font-semibold" href="../assets/models/oscilloscope.step">STEP model</a></div>
+      </article>
+
+      <article class="glass-panel rounded-2xl p-8 glow-hover transition-all">
+        <div class="flex items-start justify-between gap-6 mb-6"><div><span class="font-label-caps text-secondary">Energy Monitoring</span><h3 class="font-headline-lg text-white mt-3">Energy Monitoring System V2</h3></div><span class="material-symbols-outlined text-primary text-4xl">bolt</span></div>
+        <p class="text-on-surface-variant mb-6">Second-generation energy monitoring concept using RAK3173, LoRaWAN, deeper three-phase analytics, extended antenna performance, anomaly detection, and optimized field-node power consumption.</p>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6 text-sm"><div><p class="font-label-caps text-primary">Module</p><p>RAK3173</p></div><div><p class="font-label-caps text-primary">Network</p><p>LoRaWAN</p></div><div><p class="font-label-caps text-primary">Power</p><p>3-phase</p></div><div><p class="font-label-caps text-primary">Analytics</p><p>Anomaly</p></div></div>
+        <a class="text-primary font-semibold" href="../assets/docs/energy-monitoring-v2.html">Project HTML</a>
+      </article>
+    </div>
+  </section>
+
+  <section class="max-w-screen-2xl mx-auto px-8 mb-24">
+    <div class="glass-panel rounded-[2rem] p-8 md:p-12">
+      <span class="font-label-caps text-primary">Product Matrix</span>
+      <h2 class="font-headline-lg text-white mt-3 mb-8">Where each product fits</h2>
+      <div class="overflow-x-auto">
+        <table class="w-full text-left text-sm">
+          <thead class="text-primary font-label-caps border-b border-white/10"><tr><th class="py-4 pr-6">Product</th><th class="py-4 pr-6">Category</th><th class="py-4 pr-6">Core Tech</th><th class="py-4 pr-6">Best Use</th></tr></thead>
+          <tbody class="divide-y divide-white/10 text-on-surface-variant">
+            <tr><td class="py-4 pr-6 text-white">CareFlow V1</td><td class="py-4 pr-6">Industrial IoT</td><td class="py-4 pr-6">LoRaWAN + Modbus RTU</td><td class="py-4 pr-6">Generator and power stability monitoring</td></tr>
+            <tr><td class="py-4 pr-6 text-white">Multi-Zone Automation</td><td class="py-4 pr-6">Smart facility</td><td class="py-4 pr-6">ESPHome + Home Assistant</td><td class="py-4 pr-6">Lighting, access, presence, hybrid switching</td></tr>
+            <tr><td class="py-4 pr-6 text-white">Router CNC</td><td class="py-4 pr-6">Manufacturing</td><td class="py-4 pr-6">Stepper motion + rigid frame</td><td class="py-4 pr-6">Routing, panels, prototyping</td></tr>
+            <tr><td class="py-4 pr-6 text-white">Laser CNC</td><td class="py-4 pr-6">Manufacturing</td><td class="py-4 pr-6">Laser toolhead + vector workflow</td><td class="py-4 pr-6">Engraving, marking, sheet cutting</td></tr>
+            <tr><td class="py-4 pr-6 text-white">Pocket Oscilloscope v3</td><td class="py-4 pr-6">Embedded tools</td><td class="py-4 pr-6">RP2040 + TFT + ADC</td><td class="py-4 pr-6">Portable signal inspection and education</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="w-full border-t border-white/5 bg-slate-950 mt-auto">
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 py-16 px-8 md:px-12 max-w-screen-2xl mx-auto">
+    <div>
+      <a class="flex items-center gap-3 text-white mb-4 font-['Space_Grotesk']" href="../"><img class="footer-logo" src="../assets/images/slogo.png" alt="Southern IoT logo"/><span class="text-lg font-black">Southern IoT</span></a>
+      <p class="text-slate-500 text-sm leading-relaxed mb-6">Communication for all</p>
+      <div class="flex gap-4">
+        <a class="w-9 h-9 rounded bg-white/5 flex items-center justify-center text-slate-400 hover:text-primary transition-colors" href="#" aria-label="Website"><span class="material-symbols-outlined text-base">public</span></a>
+        <a class="w-9 h-9 rounded bg-white/5 flex items-center justify-center text-slate-400 hover:text-primary transition-colors" href="#" aria-label="Developer tools"><span class="material-symbols-outlined text-base">terminal</span></a>
+        <a class="w-9 h-9 rounded bg-white/5 flex items-center justify-center text-slate-400 hover:text-primary transition-colors" href="../blog/"><span class="material-symbols-outlined text-base">rss_feed</span></a>
+      </div>
+    </div>
+    <div class="flex flex-col gap-4">
+      <span class="font-['Space_Grotesk'] text-xs uppercase tracking-widest font-semibold text-blue-500">Company</span>
+      <a class="text-slate-500 hover:text-slate-200 transition-colors text-xs font-semibold" href="../about/">About</a>
+      <a class="text-slate-500 hover:text-slate-200 transition-colors text-xs font-semibold" href="../products/">Products</a>
+      <a class="text-slate-500 hover:text-slate-200 transition-colors text-xs font-semibold" href="#">Privacy Policy</a>
+      <a class="text-slate-500 hover:text-slate-200 transition-colors text-xs font-semibold" href="#">Terms of Service</a>
+      <a class="text-slate-500 hover:text-slate-200 transition-colors text-xs font-semibold" href="#">Compliance</a>
+    </div>
+    <div class="flex flex-col gap-4">
+      <span class="font-['Space_Grotesk'] text-xs uppercase tracking-widest font-semibold text-blue-500">Support</span>
+      <a class="text-slate-500 hover:text-slate-200 transition-colors text-xs font-semibold" href="../support/">Contact Us</a>
+      <a class="text-slate-500 hover:text-slate-200 transition-colors text-xs font-semibold" href="../support/">Global Support</a>
+      <a class="text-slate-500 hover:text-slate-200 transition-colors text-xs font-semibold" href="../support/">Status Dashboard</a>
+    </div>
+    <div class="flex flex-col gap-4">
+      <span class="font-['Space_Grotesk'] text-xs uppercase tracking-widest font-semibold text-blue-500">Contact</span>
+      <div class="text-slate-500 text-xs font-semibold">Sales: +1 (800) IOT-PREC</div>
+      <div class="text-slate-500 text-xs font-semibold">HQ: Austin, TX | Global Operations</div>
+    </div>
+  </div>
+  <div class="max-w-screen-2xl mx-auto px-8 md:px-12 py-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+    <span class="text-slate-500 font-['Space_Grotesk'] text-xs uppercase tracking-widest font-semibold">&copy; 2024 Southern IoT. Communication for all.</span>
+    <span class="text-blue-400 font-['Space_Grotesk'] text-xs uppercase tracking-widest font-semibold">ALL SYSTEMS OPERATIONAL</span>
+  </div>
+</footer>
+<script>
+document.getElementById('mobile-menu-btn')?.addEventListener('click', () => {
+  const menu = document.getElementById('mobile-menu');
+  menu?.classList.toggle('hidden');
+  menu?.classList.toggle('flex');
+});
+</script>
+</body>
+</html>

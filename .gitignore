@@ -1,0 +1,21 @@
+# Local build output
+_site/
+blog/public/
+blog/resources/
+blog/.hugo_build.lock
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Local source drops copied into deployable asset folders
+/CareFlow V1 — IIoT Energy Monitor.html
+/Home Assistant.png
+/New_encloser_design.stl
+/Pocket Oscilloscope v3.html
+/cnc.html
+/energy monitoring.html
+/oscilloscope.step
+/topscnc.png

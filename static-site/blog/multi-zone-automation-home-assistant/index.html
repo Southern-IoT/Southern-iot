@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta name="description" content="Designing reliable multi-zone automation with Home Assistant and ESPHome."/>
+  <title>Designing Reliable Multi-Zone Automation | The Edge Feed</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../../css/shared.css"/>
+</head>
+<body class="bg-[#131313] text-[#e5e2e1] font-['Inter'] selection:bg-[#a9c7ff]/30 industrial-grid min-h-screen flex flex-col">
+<nav class="fixed top-0 w-full z-50 border-b bg-slate-950/80 backdrop-blur-md border-white/10 shadow-[0_4px_20px_rgba(0,43,91,0.3)]">
+  <div class="nav-shell flex items-center justify-between px-6 md:px-8 py-4 max-w-screen-2xl mx-auto">
+    <a class="flex items-center gap-3 text-white font-['Space_Grotesk']" href="../../"><img class="brand-logo" src="../../assets/images/slogo.png" alt="Southern IoT logo"/><span class="text-xl md:text-2xl font-bold tracking-tighter">Southern IoT</span></a>
+    <div class="hidden md:flex items-center gap-5 lg:gap-8 font-['Space_Grotesk'] text-sm font-medium tracking-wide">
+      <a class="text-slate-400 hover:text-white transition-colors duration-200 hover:bg-white/5 rounded-md px-3 py-2" href="../../">Home</a><a class="text-slate-400 hover:text-white transition-colors duration-200 hover:bg-white/5 rounded-md px-3 py-2" href="../../about/">About</a><a class="text-slate-400 hover:text-white transition-colors duration-200 hover:bg-white/5 rounded-md px-3 py-2" href="../../solutions/">Solutions</a><a class="text-slate-400 hover:text-white transition-colors duration-200 hover:bg-white/5 rounded-md px-3 py-2" href="../../products/">Products</a><a class="text-slate-400 hover:text-white transition-colors duration-200 hover:bg-white/5 rounded-md px-3 py-2" href="../../ecosystem/">Ecosystem</a><a class="text-blue-400 border-b-2 border-blue-500 pb-1" href="../../blog/">Blog</a><a class="text-slate-400 hover:text-white transition-colors duration-200 hover:bg-white/5 rounded-md px-3 py-2" href="../../support/">Support</a>
+    </div>
+    <button id="mobile-menu-btn" class="md:hidden glass-panel rounded-lg p-2 text-white" aria-label="Toggle navigation"><span class="material-symbols-outlined">menu</span></button>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden flex-col gap-1 px-6 pb-6 font-['Space_Grotesk'] text-sm bg-slate-950/95 border-t border-white/10">
+    <a class="text-slate-300 px-4 py-3 rounded-lg hover:bg-white/5" href="../../">Home</a><a class="text-slate-300 px-4 py-3 rounded-lg hover:bg-white/5" href="../../about/">About</a><a class="text-slate-300 px-4 py-3 rounded-lg hover:bg-white/5" href="../../solutions/">Solutions</a><a class="text-slate-300 px-4 py-3 rounded-lg hover:bg-white/5" href="../../products/">Products</a><a class="text-slate-300 px-4 py-3 rounded-lg hover:bg-white/5" href="../../ecosystem/">Ecosystem</a><a class="text-blue-400 px-4 py-3 rounded-lg hover:bg-white/5" href="../../blog/">Blog</a><a class="text-slate-300 px-4 py-3 rounded-lg hover:bg-white/5" href="../../support/">Support</a>
+  </div>
+</nav>
+
+<main class="flex-grow pt-32 pb-24">
+  <article class="max-w-4xl mx-auto px-8">
+    <a class="inline-flex items-center gap-2 text-[#a9c7ff] font-semibold mb-10" href="../"><span class="material-symbols-outlined text-base">arrow_back</span> Back to The Edge Feed</a>
+    <header class="border-b border-white/10 pb-10 mb-10">
+      <span class="font-['Inter'] text-xs uppercase tracking-[0.08em] font-bold text-[#83cfff]">Automation</span>
+      <h1 class="font-['Space_Grotesk'] text-4xl md:text-6xl font-bold leading-tight text-white mt-5 mb-6">Designing reliable multi-zone automation with Home Assistant</h1>
+      <p class="text-xl leading-8 text-[#c4c6d0]">Home automation becomes serious engineering when physical switches, wireless nodes, door sensors, motion logic, and human expectations all need to agree.</p>
+      <div class="flex flex-wrap gap-4 text-sm text-slate-500 mt-8"><span>May 1, 2026</span><span>Southern IoT Engineering</span><span>7 min read</span></div>
+    </header>
+
+    <div class="article-body">
+      <p>A multi-zone automation system is easy to demonstrate and hard to make trustworthy. Turning a light on from a phone is not enough. A reliable system must handle manual switching, unavailable Wi-Fi, inconsistent sensor states, multiple rooms, and the everyday behavior of people who do not want to think about automation.</p>
+      <p>The Southern IoT approach uses Home Assistant as the control plane and ESPHome nodes as the field layer. ESP32 and ESP8266 boards give enough flexibility to read switches, drive relays, monitor doors, detect motion, and expose clear entities to the dashboard.</p>
+
+      <h2>Start with zones, not devices</h2>
+      <p>The useful unit of design is the zone. A room, corridor, entry point, workshop, or equipment area has a purpose. Devices are only meaningful when they support that purpose. A zone might need occupancy, light control, door status, and a manual override. Another zone might need only a relay and schedule.</p>
+      <p>Thinking in zones prevents a common failure: building a collection of devices that looks impressive but behaves inconsistently. It also makes the dashboard easier to understand because the interface follows the building, not the wiring diagram.</p>
+
+      <h2>Manual control must remain first-class</h2>
+      <p>A good automation system should never make people feel trapped. Physical switches matter because they create confidence. If the automation server is down, a user should still be able to control the essential circuit. If a rule misfires, the manual state should be visible and respected.</p>
+      <p>ESPHome makes this practical because local firmware can read GPIO inputs and expose both the switch state and relay state. Home Assistant can then coordinate rules without becoming the only path to action.</p>
+
+      <blockquote>The best automation is not the one that hides all complexity. It is the one that fails in a way people can understand.</blockquote>
+
+      <h2>Use motion carefully</h2>
+      <p>Motion sensors are powerful but easy to overuse. In a corridor, they can reduce wasted energy. In a working room, they can become annoying if the timeout is wrong. In a doorway, they may need to be combined with door state or schedule context.</p>
+      <p>The practical pattern is to treat motion as a signal, not a command. Motion can request a light state, extend a timer, or mark a zone as active, but the final rule should consider time of day, manual override, and current device state.</p>
+
+      <h2>Dashboard design is part of reliability</h2>
+      <p>Operators and residents need to see what the system thinks is happening. A clean dashboard should show zone status, relay state, sensor state, and recent automation actions. When a light turns on unexpectedly, the dashboard should help explain whether motion, schedule, or manual input caused it.</p>
+      <p>This is where Home Assistant is especially useful. It can present a friendly control layer while preserving the deeper entity model for debugging and expansion.</p>
+
+      <h2>What makes the system scalable</h2>
+      <p>The system scales when each zone follows a repeatable pattern: named entities, documented GPIO mapping, consistent firmware conventions, and automations written for clarity. Repetition is not boring here. Repetition is what makes the fifth zone easier than the first.</p>
+      <p>That is the difference between a hobby build and a maintainable automation product. The technology is familiar, but the discipline turns it into something people can rely on every day.</p>
+
+      <p><a href="../../products/">See the automation product line</a></p>
+    </div>
+  </article>
+</main>
+
+<footer class="w-full border-t border-white/5 bg-slate-950 mt-auto">
+  <div class="max-w-screen-2xl mx-auto px-8 md:px-12 py-8 flex flex-col md:flex-row justify-between items-center gap-4">
+    <span class="text-slate-500 font-['Space_Grotesk'] text-xs uppercase tracking-widest font-semibold">&copy; 2024 Southern IoT. Communication for all.</span>
+    <span class="text-blue-400 font-['Space_Grotesk'] text-xs uppercase tracking-widest font-semibold">ALL SYSTEMS OPERATIONAL</span>
+  </div>
+</footer>
+<script>
+document.getElementById('mobile-menu-btn')?.addEventListener('click', () => {
+  const menu = document.getElementById('mobile-menu');
+  menu?.classList.toggle('hidden');
+  menu?.classList.toggle('flex');
+});
+</script>
+</body>
+</html>

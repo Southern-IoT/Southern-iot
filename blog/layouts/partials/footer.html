@@ -1,0 +1,40 @@
+{{ $root := .Site.Params.siteRoot }}
+<footer class="w-full border-t border-white/5 bg-slate-950 mt-auto">
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 py-16 px-8 md:px-12 max-w-screen-2xl mx-auto">
+    <div>
+      <a class="flex items-center gap-3 text-white mb-4 font-['Space_Grotesk']" href="{{ $root }}">
+        <img class="footer-logo" src="{{ "images/slogo.png" | relURL }}" alt="Southern IoT logo"/>
+        <span class="text-lg font-black">Southern IoT</span>
+      </a>
+      <p class="text-slate-500 text-sm leading-relaxed mb-6">Communication for all</p>
+      <div class="flex gap-4">
+        <a class="w-9 h-9 rounded bg-white/5 flex items-center justify-center text-slate-400 hover:text-primary transition-colors" href="#" aria-label="Website"><span class="material-symbols-outlined text-base">public</span></a>
+        <a class="w-9 h-9 rounded bg-white/5 flex items-center justify-center text-slate-400 hover:text-primary transition-colors" href="#" aria-label="Developer tools"><span class="material-symbols-outlined text-base">terminal</span></a>
+        <a class="w-9 h-9 rounded bg-white/5 flex items-center justify-center text-slate-400 hover:text-primary transition-colors" href="{{ "" | relURL }}" aria-label="RSS feed"><span class="material-symbols-outlined text-base">rss_feed</span></a>
+      </div>
+    </div>
+    <div class="flex flex-col gap-4">
+      <span class="font-['Space_Grotesk'] text-xs uppercase tracking-widest font-semibold text-blue-500">Company</span>
+      <a class="text-slate-500 hover:text-slate-200 transition-colors text-xs font-semibold" href="{{ printf "%sabout/" $root }}">About</a>
+      <a class="text-slate-500 hover:text-slate-200 transition-colors text-xs font-semibold" href="{{ printf "%sproducts/" $root }}">Products</a>
+      <a class="text-slate-500 hover:text-slate-200 transition-colors text-xs font-semibold" href="#">Privacy Policy</a>
+      <a class="text-slate-500 hover:text-slate-200 transition-colors text-xs font-semibold" href="#">Terms of Service</a>
+      <a class="text-slate-500 hover:text-slate-200 transition-colors text-xs font-semibold" href="#">Compliance</a>
+    </div>
+    <div class="flex flex-col gap-4">
+      <span class="font-['Space_Grotesk'] text-xs uppercase tracking-widest font-semibold text-blue-500">Support</span>
+      <a class="text-slate-500 hover:text-slate-200 transition-colors text-xs font-semibold" href="{{ printf "%ssupport/" $root }}">Contact Us</a>
+      <a class="text-slate-500 hover:text-slate-200 transition-colors text-xs font-semibold" href="{{ printf "%ssupport/" $root }}">Global Support</a>
+      <a class="text-slate-500 hover:text-slate-200 transition-colors text-xs font-semibold" href="{{ printf "%ssupport/" $root }}">Status Dashboard</a>
+    </div>
+    <div class="flex flex-col gap-4">
+      <span class="font-['Space_Grotesk'] text-xs uppercase tracking-widest font-semibold text-blue-500">Contact</span>
+      <div class="text-slate-500 text-xs font-semibold">Sales: +1 (800) IOT-PREC</div>
+      <div class="text-slate-500 text-xs font-semibold">HQ: Austin, TX | Global Operations</div>
+    </div>
+  </div>
+  <div class="max-w-screen-2xl mx-auto px-8 md:px-12 py-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+    <span class="text-slate-500 font-['Space_Grotesk'] text-xs uppercase tracking-widest font-semibold">&copy; 2024 Southern IoT. Communication for all.</span>
+    <span class="text-blue-400 font-['Space_Grotesk'] text-xs uppercase tracking-widest font-semibold">ALL SYSTEMS OPERATIONAL</span>
+  </div>
+</footer>

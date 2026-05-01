@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta name="description" content="The Edge Feed: professional Southern IoT articles on industrial IoT, automation, CNC machines, energy monitoring, and embedded diagnostics."/>
+  <title>The Edge Feed | Southern IoT</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <script>
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        "primary-container": "#002b5b",
+        "on-secondary": "#00344b",
+        "surface-bright": "#393939",
+        "tertiary-fixed": "#dfe3e7",
+        "tertiary": "#c3c7cb",
+        "surface-container-highest": "#353534",
+        "on-secondary-fixed-variant": "#004c6b",
+        "inverse-surface": "#e5e2e1",
+        "on-surface-variant": "#c4c6d0",
+        "on-primary": "#073060",
+        "background": "#131313",
+        "primary-fixed-dim": "#a9c7ff",
+        "on-tertiary-container": "#8f9397",
+        "secondary-fixed": "#c6e7ff",
+        "on-tertiary-fixed-variant": "#43474b",
+        "surface-container-low": "#1c1b1b",
+        "outline-variant": "#43474f",
+        "inverse-primary": "#405f91",
+        "surface-container-high": "#2a2a2a",
+        "surface-variant": "#353534",
+        "surface-dim": "#131313",
+        "tertiary-container": "#272c2f",
+        "tertiary-fixed-dim": "#c3c7cb",
+        "primary": "#a9c7ff",
+        "on-secondary-fixed": "#001e2d",
+        "error-container": "#93000a",
+        "error": "#ffb4ab",
+        "secondary-fixed-dim": "#83cfff",
+        "secondary": "#83cfff",
+        "on-background": "#e5e2e1",
+        "primary-fixed": "#d6e3ff",
+        "on-tertiary-fixed": "#171c1f",
+        "on-surface": "#e5e2e1",
+        "on-primary-container": "#7594ca",
+        "surface-tint": "#a9c7ff",
+        "surface-container-lowest": "#0e0e0e",
+        "outline": "#8d909a",
+        "surface": "#131313",
+        "surface-container": "#201f1f",
+        "on-tertiary": "#2c3134",
+        "on-error-container": "#ffdad6",
+        "on-primary-fixed-variant": "#264778",
+        "on-error": "#690005",
+        "inverse-on-surface": "#313030",
+        "secondary-container": "#03a8e8",
+        "on-secondary-container": "#003952",
+        "on-primary-fixed": "#001b3d"
+      },
+      borderRadius: { DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px" },
+      spacing: { gutter: "24px", md: "16px", xxl: "48px", sm: "8px", xl: "32px", "container-max": "1440px", xs: "4px", unit: "8px", lg: "24px" },
+      fontFamily: { "headline-md": ["Space Grotesk"], "body-lg": ["Inter"], "body-sm": ["Inter"], "label-caps": ["Inter"], "headline-lg": ["Space Grotesk"], "display": ["Space Grotesk"], "body-md": ["Inter"] },
+      fontSize: {
+        "headline-md": ["24px", {lineHeight: "1.3", fontWeight: "600"}],
+        "body-lg": ["18px", {lineHeight: "1.6", fontWeight: "400"}],
+        "body-sm": ["14px", {lineHeight: "1.5", fontWeight: "400"}],
+        "label-caps": ["12px", {lineHeight: "1", letterSpacing: "0.08em", fontWeight: "700"}],
+        "headline-lg": ["32px", {lineHeight: "1.2", fontWeight: "600"}],
+        "display": ["48px", {lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700"}],
+        "body-md": ["16px", {lineHeight: "1.5", fontWeight: "400"}]
+      }
+    }
+  }
+}
+</script>
+  <link rel="stylesheet" href="../css/shared.css"/>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary/30 industrial-grid min-h-screen flex flex-col">
+<nav class="fixed top-0 w-full z-50 border-b bg-slate-950/80 backdrop-blur-md border-white/10 shadow-[0_4px_20px_rgba(0,43,91,0.3)]">
+  <div class="nav-shell flex items-center justify-between px-6 md:px-8 py-4 max-w-screen-2xl mx-auto">
+    <a class="flex items-center gap-3 text-white font-['Space_Grotesk']" href="../"><img class="brand-logo" src="../assets/images/slogo.png" alt="Southern IoT logo"/><span class="text-xl md:text-2xl font-bold tracking-tighter">Southern IoT</span></a>
+    <div class="hidden md:flex items-center gap-5 lg:gap-8 font-['Space_Grotesk'] text-sm font-medium tracking-wide">
+      <a class="text-slate-400 hover:text-white transition-colors duration-200 hover:bg-white/5 rounded-md px-3 py-2" href="../">Home</a><a class="text-slate-400 hover:text-white transition-colors duration-200 hover:bg-white/5 rounded-md px-3 py-2" href="../about/">About</a><a class="text-slate-400 hover:text-white transition-colors duration-200 hover:bg-white/5 rounded-md px-3 py-2" href="../solutions/">Solutions</a><a class="text-slate-400 hover:text-white transition-colors duration-200 hover:bg-white/5 rounded-md px-3 py-2" href="../products/">Products</a><a class="text-slate-400 hover:text-white transition-colors duration-200 hover:bg-white/5 rounded-md px-3 py-2" href="../ecosystem/">Ecosystem</a><a class="text-blue-400 border-b-2 border-blue-500 pb-1" href="../blog/">Blog</a><a class="text-slate-400 hover:text-white transition-colors duration-200 hover:bg-white/5 rounded-md px-3 py-2" href="../support/">Support</a>
+    </div>
+    <div class="flex items-center gap-3">
+      <div class="hidden lg:flex items-center gap-3 text-slate-400" aria-hidden="true">
+        <span class="material-symbols-outlined text-xl">language</span>
+        <span class="material-symbols-outlined text-xl">dark_mode</span>
+      </div>
+      <a class="hidden sm:inline-flex bg-primary-container text-white px-5 py-2 rounded-lg font-headline-md text-sm active:scale-95 transform transition-transform hover:shadow-[0_0_15px_rgba(3,168,232,0.4)]" href="../support/">Get Started</a>
+      <button id="mobile-menu-btn" class="md:hidden glass-panel rounded-lg p-2 text-white" aria-label="Toggle navigation">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+    </div>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden flex-col gap-1 px-6 pb-6 font-['Space_Grotesk'] text-sm bg-slate-950/95 border-t border-white/10">
+    <a class="text-slate-300 px-4 py-3 rounded-lg hover:bg-white/5" href="../">Home</a><a class="text-slate-300 px-4 py-3 rounded-lg hover:bg-white/5" href="../about/">About</a><a class="text-slate-300 px-4 py-3 rounded-lg hover:bg-white/5" href="../solutions/">Solutions</a><a class="text-slate-300 px-4 py-3 rounded-lg hover:bg-white/5" href="../products/">Products</a><a class="text-slate-300 px-4 py-3 rounded-lg hover:bg-white/5" href="../ecosystem/">Ecosystem</a><a class="text-blue-400 px-4 py-3 rounded-lg hover:bg-white/5" href="../blog/">Blog</a><a class="text-slate-300 px-4 py-3 rounded-lg hover:bg-white/5" href="../support/">Support</a>
+    <a class="mt-2 bg-primary-container text-white px-4 py-3 rounded-lg text-center" href="../support/">Get Started</a>
+  </div>
+</nav>
+
+<main class="flex-grow pt-32 pb-24">
+  <section class="max-w-screen-2xl mx-auto px-8 mb-16">
+    <div class="max-w-4xl">
+      <div class="inline-flex items-center gap-2 border border-white/10 rounded-full px-4 py-2 mb-6">
+        <span class="h-2 w-2 rounded-full bg-secondary status-pulse"></span>
+        <span class="font-label-caps text-primary">Editorial Journal</span>
+      </div>
+      <h1 class="font-display text-5xl md:text-display text-white mb-6">The Edge Feed</h1>
+      <p class="font-body-lg text-on-surface-variant max-w-3xl">Engineering stories, field notes, and deployment thinking from Southern IoT. Products live in the catalog; this space explains the decisions, tradeoffs, and lessons behind the work.</p>
+    </div>
+  </section>
+
+  <section class="max-w-screen-2xl mx-auto px-8 mb-16">
+    <article class="border-y border-white/10 py-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+        <div class="lg:col-span-3">
+          <p class="font-label-caps text-secondary mb-4">Featured Essay</p>
+          <p class="text-sm text-slate-500">May 2, 2026</p>
+          <p class="text-sm text-slate-500 mt-1">By Southern IoT Engineering</p>
+        </div>
+        <div class="lg:col-span-6">
+          <h2 class="font-display text-4xl text-white mb-5">CareFlow V1 and the practical discipline of remote energy visibility</h2>
+          <p class="text-on-surface-variant text-lg leading-8">A reliable energy monitor is not only a sensor package. It is a communication strategy: Modbus RTU for trusted equipment data, local buffering when the site is offline, LoRaWAN for long-distance transport, and clean cloud context for the operator who needs to act quickly.</p>
+        </div>
+        <div class="lg:col-span-3">
+          <div class="border-l border-primary/30 pl-5">
+            <p class="font-label-caps text-primary mb-3">In this article</p>
+            <p class="text-sm text-slate-400 leading-6">Generator telemetry, field enclosures, outage tolerance, LoRaWAN link planning, and dashboards that expose only the signals operators need.</p>
+            <a class="inline-flex items-center gap-2 text-primary font-semibold mt-5" href="careflow-v1-energy-visibility/">Read full essay <span class="material-symbols-outlined text-base">arrow_forward</span></a>
+          </div>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <section class="max-w-screen-2xl mx-auto px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+      <div class="lg:col-span-8">
+        <div class="flex items-center justify-between gap-6 pb-5 border-b border-white/10">
+          <div>
+            <span class="font-label-caps text-primary">Latest Articles</span>
+            <h2 class="font-headline-lg text-white mt-3">Field notes and technical essays</h2>
+          </div>
+          <span class="hidden sm:block text-sm text-slate-500">Static edition</span>
+        </div>
+
+        <div class="divide-y divide-white/10">
+          <article class="grid grid-cols-1 md:grid-cols-12 gap-6 py-9">
+            <div class="md:col-span-3">
+              <span class="font-label-caps text-secondary">Automation</span>
+              <p class="text-sm text-slate-500 mt-3">May 1, 2026</p>
+            </div>
+            <div class="md:col-span-9">
+              <h3 class="font-headline-lg text-white mb-3">Designing reliable multi-zone automation with Home Assistant</h3>
+              <p class="text-on-surface-variant leading-7 mb-4">A practical architecture for ESP32 and ESP8266 nodes, ESPHome firmware, motion detection, door state monitoring, and manual switch override. The goal is simple: make every automation understandable when the network, the user, or the hardware changes state.</p>
+              <div class="flex flex-wrap items-center gap-4 text-sm text-slate-500 mb-5"><span>Southern IoT Engineering</span><span>7 min read</span><span>ESPHome</span></div>
+              <a class="inline-flex items-center gap-2 text-primary font-semibold" href="multi-zone-automation-home-assistant/">Read more <span class="material-symbols-outlined text-base">arrow_forward</span></a>
+            </div>
+          </article>
+
+          <article class="grid grid-cols-1 md:grid-cols-12 gap-6 py-9">
+            <div class="md:col-span-3">
+              <span class="font-label-caps text-secondary">Manufacturing</span>
+              <p class="text-sm text-slate-500 mt-3">April 30, 2026</p>
+            </div>
+            <div class="md:col-span-9">
+              <h3 class="font-headline-lg text-white mb-3">Router CNC and Laser CNC in one connected fabrication workflow</h3>
+              <p class="text-on-surface-variant leading-7 mb-4">Routing and laser work should not feel like isolated machines. We look at the shared workflow around job preparation, motion repeatability, safety interlocks, maintenance signals, and the telemetry needed to move from prototype to repeatable production.</p>
+              <div class="flex flex-wrap items-center gap-4 text-sm text-slate-500 mb-5"><span>Product Lab</span><span>8 min read</span><span>CNC</span></div>
+              <a class="inline-flex items-center gap-2 text-primary font-semibold" href="connected-cnc-workflow/">Read more <span class="material-symbols-outlined text-base">arrow_forward</span></a>
+            </div>
+          </article>
+
+          <article class="grid grid-cols-1 md:grid-cols-12 gap-6 py-9">
+            <div class="md:col-span-3">
+              <span class="font-label-caps text-secondary">Embedded Tools</span>
+              <p class="text-sm text-slate-500 mt-3">April 29, 2026</p>
+            </div>
+            <div class="md:col-span-9">
+              <h3 class="font-headline-lg text-white mb-3">Pocket Oscilloscope v3 as a field diagnostic companion</h3>
+              <p class="text-on-surface-variant leading-7 mb-4">Portable diagnostics change how engineers behave on site. This note covers RP2040 sampling, ILI9341 visualization, hold mode, calibration, battery power, and why a small oscilloscope is often enough to identify the real failure mode.</p>
+              <div class="flex flex-wrap items-center gap-4 text-sm text-slate-500"><span>Embedded Systems</span><span>5 min read</span><span>Diagnostics</span><span class="text-slate-600">Full article coming next</span></div>
+            </div>
+          </article>
+
+          <article class="grid grid-cols-1 md:grid-cols-12 gap-6 py-9">
+            <div class="md:col-span-3">
+              <span class="font-label-caps text-secondary">Connectivity</span>
+              <p class="text-sm text-slate-500 mt-3">April 26, 2026</p>
+            </div>
+            <div class="md:col-span-9">
+              <h3 class="font-headline-lg text-white mb-3">Optimizing LoRaWAN gateway placement for industrial sites</h3>
+              <p class="text-on-surface-variant leading-7 mb-4">A deployment guide for line of sight, antenna elevation, link margin, gateway density, and redundant coverage. Good radio planning is less glamorous than dashboards, but it is usually where uptime is won.</p>
+              <div class="flex flex-wrap items-center gap-4 text-sm text-slate-500"><span>Network Team</span><span>8 min read</span><span>LoRaWAN</span></div>
+            </div>
+          </article>
+
+          <article class="grid grid-cols-1 md:grid-cols-12 gap-6 py-9">
+            <div class="md:col-span-3">
+              <span class="font-label-caps text-secondary">Security</span>
+              <p class="text-sm text-slate-500 mt-3">April 22, 2026</p>
+            </div>
+            <div class="md:col-span-9">
+              <h3 class="font-headline-lg text-white mb-3">Zero-trust architecture at the industrial network edge</h3>
+              <p class="text-on-surface-variant leading-7 mb-4">Industrial zero trust starts with device identity, not slogans. This article outlines signed updates, encrypted telemetry, least-privilege service paths, and remote workflows that can be audited without slowing down field support.</p>
+              <div class="flex flex-wrap items-center gap-4 text-sm text-slate-500"><span>Security Desk</span><span>9 min read</span><span>Policy</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <aside class="lg:col-span-4">
+        <div class="sticky top-28 space-y-8">
+          <section class="glass-panel rounded-2xl p-7">
+            <span class="font-label-caps text-primary">Search The Feed</span>
+            <div class="mt-5 flex items-center gap-3 rounded-xl border border-white/10 bg-black/20 px-4 py-3 text-slate-500">
+              <span class="material-symbols-outlined">search</span>
+              <span class="text-sm">LoRaWAN, CNC, energy, security</span>
+            </div>
+          </section>
+
+          <section class="glass-panel rounded-2xl p-7">
+            <span class="font-label-caps text-primary">Categories</span>
+            <div class="mt-5 space-y-3 text-sm">
+              <div class="flex justify-between border-b border-white/10 pb-3"><span class="text-slate-300">Industrial IoT</span><span class="text-slate-500">4</span></div>
+              <div class="flex justify-between border-b border-white/10 pb-3"><span class="text-slate-300">Automation</span><span class="text-slate-500">3</span></div>
+              <div class="flex justify-between border-b border-white/10 pb-3"><span class="text-slate-300">Manufacturing</span><span class="text-slate-500">2</span></div>
+              <div class="flex justify-between border-b border-white/10 pb-3"><span class="text-slate-300">Security</span><span class="text-slate-500">2</span></div>
+              <div class="flex justify-between"><span class="text-slate-300">Connectivity</span><span class="text-slate-500">5</span></div>
+            </div>
+          </section>
+
+          <section class="glass-panel rounded-2xl p-7">
+            <span class="font-label-caps text-primary">Editor Note</span>
+            <p class="text-on-surface-variant mt-5 leading-7">This static edition keeps the blog readable and deployable today. Later, Hugo can turn each essay into a full post with tags, RSS, related articles, and author pages.</p>
+          </section>
+        </div>
+      </aside>
+    </div>
+  </section>
+</main>
+
+<footer class="w-full border-t border-white/5 bg-slate-950 mt-auto">
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 py-16 px-8 md:px-12 max-w-screen-2xl mx-auto">
+    <div>
+      <a class="flex items-center gap-3 text-white mb-4 font-['Space_Grotesk']" href="../"><img class="footer-logo" src="../assets/images/slogo.png" alt="Southern IoT logo"/><span class="text-lg font-black">Southern IoT</span></a>
+      <p class="text-slate-500 text-sm leading-relaxed mb-6">Communication for all</p>
+      <div class="flex gap-4">
+        <a class="w-9 h-9 rounded bg-white/5 flex items-center justify-center text-slate-400 hover:text-primary transition-colors" href="#" aria-label="Website"><span class="material-symbols-outlined text-base">public</span></a>
+        <a class="w-9 h-9 rounded bg-white/5 flex items-center justify-center text-slate-400 hover:text-primary transition-colors" href="#" aria-label="Developer tools"><span class="material-symbols-outlined text-base">terminal</span></a>
+        <a class="w-9 h-9 rounded bg-white/5 flex items-center justify-center text-slate-400 hover:text-primary transition-colors" href="../blog/"><span class="material-symbols-outlined text-base">rss_feed</span></a>
+      </div>
+    </div>
+    <div class="flex flex-col gap-4">
+      <span class="font-['Space_Grotesk'] text-xs uppercase tracking-widest font-semibold text-blue-500">Company</span>
+      <a class="text-slate-500 hover:text-slate-200 transition-colors text-xs font-semibold" href="../about/">About</a>
+      <a class="text-slate-500 hover:text-slate-200 transition-colors text-xs font-semibold" href="../products/">Products</a>
+      <a class="text-slate-500 hover:text-slate-200 transition-colors text-xs font-semibold" href="#">Privacy Policy</a>
+      <a class="text-slate-500 hover:text-slate-200 transition-colors text-xs font-semibold" href="#">Terms of Service</a>
+      <a class="text-slate-500 hover:text-slate-200 transition-colors text-xs font-semibold" href="#">Compliance</a>
+    </div>
+    <div class="flex flex-col gap-4">
+      <span class="font-['Space_Grotesk'] text-xs uppercase tracking-widest font-semibold text-blue-500">Support</span>
+      <a class="text-slate-500 hover:text-slate-200 transition-colors text-xs font-semibold" href="../support/">Contact Us</a>
+      <a class="text-slate-500 hover:text-slate-200 transition-colors text-xs font-semibold" href="../support/">Global Support</a>
+      <a class="text-slate-500 hover:text-slate-200 transition-colors text-xs font-semibold" href="../support/">Status Dashboard</a>
+    </div>
+    <div class="flex flex-col gap-4">
+      <span class="font-['Space_Grotesk'] text-xs uppercase tracking-widest font-semibold text-blue-500">Contact</span>
+      <div class="text-slate-500 text-xs font-semibold">Sales: +1 (800) IOT-PREC</div>
+      <div class="text-slate-500 text-xs font-semibold">HQ: Austin, TX | Global Operations</div>
+    </div>
+  </div>
+  <div class="max-w-screen-2xl mx-auto px-8 md:px-12 py-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+    <span class="text-slate-500 font-['Space_Grotesk'] text-xs uppercase tracking-widest font-semibold">&copy; 2024 Southern IoT. Communication for all.</span>
+    <span class="text-blue-400 font-['Space_Grotesk'] text-xs uppercase tracking-widest font-semibold">ALL SYSTEMS OPERATIONAL</span>
+  </div>
+</footer>
+<script>
+document.getElementById('mobile-menu-btn')?.addEventListener('click', () => {
+  const menu = document.getElementById('mobile-menu');
+  menu?.classList.toggle('hidden');
+  menu?.classList.toggle('flex');
+});
+</script>
+</body>
+</html>

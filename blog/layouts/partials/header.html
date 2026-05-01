@@ -1,0 +1,35 @@
+{{ $root := .Site.Params.siteRoot }}
+<nav class="fixed top-0 w-full z-50 border-b bg-slate-950/80 backdrop-blur-md border-white/10 shadow-[0_4px_20px_rgba(0,43,91,0.3)]">
+  <div class="nav-shell flex items-center justify-between px-6 md:px-8 py-4 max-w-screen-2xl mx-auto">
+    <a class="flex items-center gap-3 text-white font-['Space_Grotesk']" href="{{ $root }}">
+      <img class="brand-logo" src="{{ "images/slogo.png" | relURL }}" alt="Southern IoT logo"/>
+      <span class="text-xl md:text-2xl font-bold tracking-tighter">Southern IoT</span>
+    </a>
+    <div class="hidden md:flex items-center gap-5 lg:gap-8 font-['Space_Grotesk'] text-sm font-medium tracking-wide">
+      <a class="text-slate-400 hover:text-white transition-colors duration-200 hover:bg-white/5 rounded-md px-3 py-2" href="{{ $root }}">Home</a>
+      <a class="text-slate-400 hover:text-white transition-colors duration-200 hover:bg-white/5 rounded-md px-3 py-2" href="{{ printf "%sabout/" $root }}">About</a>
+      <a class="text-slate-400 hover:text-white transition-colors duration-200 hover:bg-white/5 rounded-md px-3 py-2" href="{{ printf "%ssolutions/" $root }}">Solutions</a>
+      <a class="text-slate-400 hover:text-white transition-colors duration-200 hover:bg-white/5 rounded-md px-3 py-2" href="{{ printf "%sproducts/" $root }}">Products</a>
+      <a class="text-slate-400 hover:text-white transition-colors duration-200 hover:bg-white/5 rounded-md px-3 py-2" href="{{ printf "%secosystem/" $root }}">Ecosystem</a>
+      <a class="text-blue-400 border-b-2 border-blue-500 pb-1" href="{{ "" | relURL }}">Blog</a>
+      <a class="text-slate-400 hover:text-white transition-colors duration-200 hover:bg-white/5 rounded-md px-3 py-2" href="{{ printf "%ssupport/" $root }}">Support</a>
+    </div>
+    <div class="flex items-center gap-3">
+      <div class="hidden lg:flex items-center gap-3 text-slate-400" aria-hidden="true">
+        <span class="material-symbols-outlined text-xl">language</span>
+        <span class="material-symbols-outlined text-xl">dark_mode</span>
+      </div>
+      <a class="hidden sm:inline-flex bg-primary-container text-white px-5 py-2 rounded-lg font-headline-md text-sm active:scale-95 transform transition-transform hover:shadow-[0_0_15px_rgba(3,168,232,0.4)]" href="{{ printf "%ssupport/" $root }}">Get Started</a>
+      <button id="mobile-menu-btn" class="md:hidden glass-panel rounded-lg p-2 text-white" aria-label="Toggle navigation"><span class="material-symbols-outlined">menu</span></button>
+    </div>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden flex-col gap-1 px-6 pb-6 font-['Space_Grotesk'] text-sm bg-slate-950/95 border-t border-white/10">
+    <a class="text-slate-300 px-4 py-3 rounded-lg hover:bg-white/5" href="{{ $root }}">Home</a>
+    <a class="text-slate-300 px-4 py-3 rounded-lg hover:bg-white/5" href="{{ printf "%sabout/" $root }}">About</a>
+    <a class="text-slate-300 px-4 py-3 rounded-lg hover:bg-white/5" href="{{ printf "%ssolutions/" $root }}">Solutions</a>
+    <a class="text-slate-300 px-4 py-3 rounded-lg hover:bg-white/5" href="{{ printf "%sproducts/" $root }}">Products</a>
+    <a class="text-slate-300 px-4 py-3 rounded-lg hover:bg-white/5" href="{{ printf "%secosystem/" $root }}">Ecosystem</a>
+    <a class="text-blue-400 px-4 py-3 rounded-lg hover:bg-white/5" href="{{ "" | relURL }}">Blog</a>
+    <a class="text-slate-300 px-4 py-3 rounded-lg hover:bg-white/5" href="{{ printf "%ssupport/" $root }}">Support</a>
+  </div>
+</nav>

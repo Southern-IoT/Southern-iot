@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta name="description" content="Router CNC and Laser CNC in one connected fabrication workflow."/>
+  <title>Router CNC and Laser CNC Workflow | The Edge Feed</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../../css/shared.css"/>
+</head>
+<body class="bg-[#131313] text-[#e5e2e1] font-['Inter'] selection:bg-[#a9c7ff]/30 industrial-grid min-h-screen flex flex-col">
+<nav class="fixed top-0 w-full z-50 border-b bg-slate-950/80 backdrop-blur-md border-white/10 shadow-[0_4px_20px_rgba(0,43,91,0.3)]">
+  <div class="nav-shell flex items-center justify-between px-6 md:px-8 py-4 max-w-screen-2xl mx-auto">
+    <a class="flex items-center gap-3 text-white font-['Space_Grotesk']" href="../../"><img class="brand-logo" src="../../assets/images/slogo.png" alt="Southern IoT logo"/><span class="text-xl md:text-2xl font-bold tracking-tighter">Southern IoT</span></a>
+    <div class="hidden md:flex items-center gap-5 lg:gap-8 font-['Space_Grotesk'] text-sm font-medium tracking-wide">
+      <a class="text-slate-400 hover:text-white transition-colors duration-200 hover:bg-white/5 rounded-md px-3 py-2" href="../../">Home</a><a class="text-slate-400 hover:text-white transition-colors duration-200 hover:bg-white/5 rounded-md px-3 py-2" href="../../about/">About</a><a class="text-slate-400 hover:text-white transition-colors duration-200 hover:bg-white/5 rounded-md px-3 py-2" href="../../solutions/">Solutions</a><a class="text-slate-400 hover:text-white transition-colors duration-200 hover:bg-white/5 rounded-md px-3 py-2" href="../../products/">Products</a><a class="text-slate-400 hover:text-white transition-colors duration-200 hover:bg-white/5 rounded-md px-3 py-2" href="../../ecosystem/">Ecosystem</a><a class="text-blue-400 border-b-2 border-blue-500 pb-1" href="../../blog/">Blog</a><a class="text-slate-400 hover:text-white transition-colors duration-200 hover:bg-white/5 rounded-md px-3 py-2" href="../../support/">Support</a>
+    </div>
+    <button id="mobile-menu-btn" class="md:hidden glass-panel rounded-lg p-2 text-white" aria-label="Toggle navigation"><span class="material-symbols-outlined">menu</span></button>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden flex-col gap-1 px-6 pb-6 font-['Space_Grotesk'] text-sm bg-slate-950/95 border-t border-white/10">
+    <a class="text-slate-300 px-4 py-3 rounded-lg hover:bg-white/5" href="../../">Home</a><a class="text-slate-300 px-4 py-3 rounded-lg hover:bg-white/5" href="../../about/">About</a><a class="text-slate-300 px-4 py-3 rounded-lg hover:bg-white/5" href="../../solutions/">Solutions</a><a class="text-slate-300 px-4 py-3 rounded-lg hover:bg-white/5" href="../../products/">Products</a><a class="text-slate-300 px-4 py-3 rounded-lg hover:bg-white/5" href="../../ecosystem/">Ecosystem</a><a class="text-blue-400 px-4 py-3 rounded-lg hover:bg-white/5" href="../../blog/">Blog</a><a class="text-slate-300 px-4 py-3 rounded-lg hover:bg-white/5" href="../../support/">Support</a>
+  </div>
+</nav>
+
+<main class="flex-grow pt-32 pb-24">
+  <article class="max-w-4xl mx-auto px-8">
+    <a class="inline-flex items-center gap-2 text-[#a9c7ff] font-semibold mb-10" href="../"><span class="material-symbols-outlined text-base">arrow_back</span> Back to The Edge Feed</a>
+    <header class="border-b border-white/10 pb-10 mb-10">
+      <span class="font-['Inter'] text-xs uppercase tracking-[0.08em] font-bold text-[#83cfff]">Manufacturing</span>
+      <h1 class="font-['Space_Grotesk'] text-4xl md:text-6xl font-bold leading-tight text-white mt-5 mb-6">Router CNC and Laser CNC in one connected fabrication workflow</h1>
+      <p class="text-xl leading-8 text-[#c4c6d0]">Routing and laser work solve different fabrication problems, but they can share one discipline: repeatable motion, clear job preparation, safe operation, and useful machine telemetry.</p>
+      <div class="flex flex-wrap gap-4 text-sm text-slate-500 mt-8"><span>April 30, 2026</span><span>Product Lab</span><span>8 min read</span></div>
+    </header>
+
+    <div class="article-body">
+      <p>A Router CNC machine and a Laser CNC machine often live in separate mental categories. One removes material with a cutting tool. The other marks, engraves, or cuts with light. But for the team building and operating them, the deeper workflow is surprisingly similar.</p>
+      <p>Both systems need a stable frame, predictable motion, clean job setup, safe workholding, and a way to know what happened after a job finishes. Southern IoT treats them as a connected fabrication product line rather than isolated machines.</p>
+
+      <h2>Motion quality comes before software polish</h2>
+      <p>A dashboard cannot compensate for poor mechanics. The Router CNC depends on rigidity, alignment, stepper behavior, and vibration control. Laser CNC depends on consistent motion, focal distance, material setup, and controlled exposure. In both cases, physical repeatability is the foundation.</p>
+      <p>Once motion is predictable, software can make the machine easier to use. Job status, maintenance reminders, runtime history, and safety state become meaningful because the machine itself is behaving consistently.</p>
+
+      <h2>Why connect fabrication machines?</h2>
+      <p>Connectivity is not about turning every machine into a flashy dashboard. It is about reducing uncertainty. A connected CNC workflow can show whether the machine is idle, running, paused, faulted, or waiting for operator confirmation. It can track job duration and help identify patterns in failed cuts or repeated interruptions.</p>
+      <p>For small teams, this visibility matters. It helps plan production, maintain tools, and know when a machine needs attention before the next job is ruined.</p>
+
+      <blockquote>The goal is not remote control for its own sake. The goal is a workshop where machine state is visible, explainable, and safer to manage.</blockquote>
+
+      <h2>Router CNC and Laser CNC have different risk profiles</h2>
+      <p>The Router CNC is dominated by mechanical force: tool engagement, chips, clamps, feed rate, spindle behavior, and emergency stop access. The Laser CNC is dominated by optical and thermal risk: beam containment, smoke extraction, material compatibility, and interlocks.</p>
+      <p>A connected workflow should respect those differences. Router telemetry may focus on runtime, axis state, enclosure status, and job interruption. Laser telemetry should add interlock state, extraction state, and operator-ready conditions.</p>
+
+      <h2>A standard format for jobs</h2>
+      <p>One of the most useful improvements is not complex. Every job should have the same basic information: material, tool or laser setting, expected runtime, origin position, operator note, and post-job inspection result. This creates memory for the workshop.</p>
+      <p>Over time, that memory turns into process knowledge. The team learns which materials cut cleanly, which settings are risky, and which jobs need extra preparation.</p>
+
+      <h2>Where IoT belongs in the machine</h2>
+      <p>The IoT layer should observe first and command second. Signals like door state, limit state, run state, emergency stop state, temperature, and runtime counters are low-risk and high-value. They make the system more transparent without turning remote software into a safety-critical controller too early.</p>
+      <p>As the platform matures, selected remote actions can be added carefully. But the first priority is visibility: knowing the truth about the machine before, during, and after the job.</p>
+
+      <h2>A product line, not a one-off build</h2>
+      <p>The reason to standardize Router CNC and Laser CNC together is simple: repeatability. Shared conventions for electronics, wiring, status signals, documentation, and operator interface reduce support burden and make each new machine easier to understand.</p>
+      <p>That is the same philosophy Southern IoT applies across industrial products. Communication for all means machines should communicate their state clearly, not only when something breaks.</p>
+
+      <p><a href="../../products/">Explore the CNC products</a></p>
+    </div>
+  </article>
+</main>
+
+<footer class="w-full border-t border-white/5 bg-slate-950 mt-auto">
+  <div class="max-w-screen-2xl mx-auto px-8 md:px-12 py-8 flex flex-col md:flex-row justify-between items-center gap-4">
+    <span class="text-slate-500 font-['Space_Grotesk'] text-xs uppercase tracking-widest font-semibold">&copy; 2024 Southern IoT. Communication for all.</span>
+    <span class="text-blue-400 font-['Space_Grotesk'] text-xs uppercase tracking-widest font-semibold">ALL SYSTEMS OPERATIONAL</span>
+  </div>
+</footer>
+<script>
+document.getElementById('mobile-menu-btn')?.addEventListener('click', () => {
+  const menu = document.getElementById('mobile-menu');
+  menu?.classList.toggle('hidden');
+  menu?.classList.toggle('flex');
+});
+</script>
+</body>
+</html>

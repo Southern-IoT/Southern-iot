@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Edge Feed | Southern IoT</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "primary-container": "#002b5b",
+                      "on-secondary": "#00344b",
+                      "surface-bright": "#393939",
+                      "tertiary-fixed": "#dfe3e7",
+                      "tertiary": "#c3c7cb",
+                      "surface-container-highest": "#353534",
+                      "on-secondary-fixed-variant": "#004c6b",
+                      "inverse-surface": "#e5e2e1",
+                      "on-surface-variant": "#c4c6d0",
+                      "on-primary": "#073060",
+                      "background": "#131313",
+                      "primary-fixed-dim": "#a9c7ff",
+                      "on-tertiary-container": "#8f9397",
+                      "secondary-fixed": "#c6e7ff",
+                      "on-tertiary-fixed-variant": "#43474b",
+                      "surface-container-low": "#1c1b1b",
+                      "outline-variant": "#43474f",
+                      "inverse-primary": "#405f91",
+                      "surface-container-high": "#2a2a2a",
+                      "surface-variant": "#353534",
+                      "surface-dim": "#131313",
+                      "tertiary-container": "#272c2f",
+                      "tertiary-fixed-dim": "#c3c7cb",
+                      "primary": "#a9c7ff",
+                      "on-secondary-fixed": "#001e2d",
+                      "error-container": "#93000a",
+                      "error": "#ffb4ab",
+                      "secondary-fixed-dim": "#83cfff",
+                      "secondary": "#83cfff",
+                      "on-background": "#e5e2e1",
+                      "primary-fixed": "#d6e3ff",
+                      "on-tertiary-fixed": "#171c1f",
+                      "on-surface": "#e5e2e1",
+                      "on-primary-container": "#7594ca",
+                      "surface-tint": "#a9c7ff",
+                      "surface-container-lowest": "#0e0e0e",
+                      "outline": "#8d909a",
+                      "surface": "#131313",
+                      "surface-container": "#201f1f",
+                      "on-tertiary": "#2c3134",
+                      "on-error-container": "#ffdad6",
+                      "on-primary-fixed-variant": "#264778",
+                      "on-error": "#690005",
+                      "inverse-on-surface": "#313030",
+                      "secondary-container": "#03a8e8",
+                      "on-secondary-container": "#003952",
+                      "on-primary-fixed": "#001b3d"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "gutter": "24px",
+                      "md": "16px",
+                      "xxl": "48px",
+                      "sm": "8px",
+                      "xl": "32px",
+                      "container-max": "1440px",
+                      "xs": "4px",
+                      "unit": "8px",
+                      "lg": "24px"
+              },
+              "fontFamily": {
+                      "headline-md": ["Space Grotesk"],
+                      "body-lg": ["Inter"],
+                      "body-sm": ["Inter"],
+                      "label-caps": ["Inter"],
+                      "headline-lg": ["Space Grotesk"],
+                      "display": ["Space Grotesk"],
+                      "body-md": ["Inter"]
+              },
+              "fontSize": {
+                      "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                      "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.08em", "fontWeight": "700"}],
+                      "headline-lg": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                      "display": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .status-pulse {
+            animation: pulse-dot 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        @keyframes pulse-dot {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: .5; transform: scale(1.2); }
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 border-b border-white/10 bg-slate-950/80 backdrop-blur-md shadow-[0_4px_20px_rgba(0,43,91,0.3)]">
+<div class="flex items-center justify-between px-8 py-4 max-w-screen-2xl mx-auto">
+<div class="text-2xl font-bold tracking-tighter text-white font-['Space_Grotesk']">Southern IoT</div>
+<div class="hidden md:flex items-center gap-8 font-['Space_Grotesk'] text-sm font-medium tracking-wide">
+<a class="text-slate-400 hover:text-white transition-colors duration-200 hover:bg-white/5 rounded-md px-3 py-2" href="#">Home</a>
+<a class="text-slate-400 hover:text-white transition-colors duration-200 hover:bg-white/5 rounded-md px-3 py-2" href="#">Solutions</a>
+<a class="text-slate-400 hover:text-white transition-colors duration-200 hover:bg-white/5 rounded-md px-3 py-2" href="#">Products</a>
+<a class="text-slate-400 hover:text-white transition-colors duration-200 hover:bg-white/5 rounded-md px-3 py-2" href="#">Ecosystem</a>
+<a class="text-slate-400 hover:text-white transition-colors duration-200 hover:bg-white/5 rounded-md px-3 py-2" href="#">Support</a>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-4 text-slate-400">
+<span class="material-symbols-outlined cursor-pointer hover:text-white transition-all active:scale-95" data-icon="dark_mode">dark_mode</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-white transition-all active:scale-95" data-icon="language">language</span>
+</div>
+<button class="bg-primary-container text-primary px-6 py-2 rounded-lg font-headline-md text-sm border border-primary/20 hover:bg-primary/10 transition-all active:scale-95">Get Started</button>
+</div>
+</div>
+</nav>
+<main class="pt-24 pb-20">
+<!-- Hero Section -->
+<section class="max-w-screen-2xl mx-auto px-8 mb-16">
+<div class="relative rounded-xl overflow-hidden h-[400px] flex items-center">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-40" data-alt="A high-tech industrial microchip with glowing blue light paths on a dark background. The lighting is dramatic and technical, with a shallow depth of field focusing on the intricate gold and silicon components. The overall mood is sophisticated and future-forward, using a palette of deep navy, electric blue, and metallic accents consistent with Southern IoT's brand identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAx0uvLbFb_mIE0TDBhrDiXTR_eIzutQBuRMzcRBQGIHgWNy_ACcszV8MejQFkfFnHwrSuYHUQa6uJzATfpXgV9FAqfGE_NcruCYe2-DrnBxmyBXZl9a7TXzR-wyz2z0H2NIo57-tc6nOh97p74oREzgU5iOCgcr_ZgW-MOEw_YUoywAZrU56KwKVecBeVbXR_PJuhogM4t_eEQkNdxrB4XQdG0WFL49nUeHXNA37793Qboqoku8dZ-iwfrtHyuE-AftaTx4uk5YzM"/>
+<div class="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-2xl pl-12">
+<div class="flex items-center gap-3 mb-6">
+<span class="w-3 h-3 bg-secondary rounded-full status-pulse"></span>
+<span class="text-secondary font-label-caps uppercase tracking-widest">Live Updates</span>
+</div>
+<h1 class="font-display text-display text-white mb-6">The Edge Feed</h1>
+<p class="font-body-lg text-on-surface-variant mb-8 leading-relaxed">
+                        Precision insights into the industrial edge. Explore hardware deep-dives, connectivity strategies, and the future of IoT infrastructure.
+                    </p>
+<div class="flex gap-4">
+<div class="bg-surface-container-high rounded-full px-4 py-2 flex items-center gap-2 border border-outline-variant">
+<span class="material-symbols-outlined text-primary text-sm">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-48 text-on-surface" placeholder="Search insights..." type="text"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Category Filter -->
+<section class="max-w-screen-2xl mx-auto px-8 mb-12">
+<div class="flex gap-4 overflow-x-auto pb-4 scrollbar-hide">
+<button class="bg-secondary-container text-on-secondary-container px-6 py-2 rounded-full font-label-caps whitespace-nowrap">All Insights</button>
+<button class="glass-panel text-on-surface-variant px-6 py-2 rounded-full font-label-caps whitespace-nowrap hover:border-primary/50 transition-colors">Connectivity</button>
+<button class="glass-panel text-on-surface-variant px-6 py-2 rounded-full font-label-caps whitespace-nowrap hover:border-primary/50 transition-colors">Hardware</button>
+<button class="glass-panel text-on-surface-variant px-6 py-2 rounded-full font-label-caps whitespace-nowrap hover:border-primary/50 transition-colors">Security</button>
+<button class="glass-panel text-on-surface-variant px-6 py-2 rounded-full font-label-caps whitespace-nowrap hover:border-primary/50 transition-colors">Cloud Sync</button>
+<button class="glass-panel text-on-surface-variant px-6 py-2 rounded-full font-label-caps whitespace-nowrap hover:border-primary/50 transition-colors">Case Studies</button>
+</div>
+</section>
+<!-- Article Grid -->
+<section class="max-w-screen-2xl mx-auto px-8">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<article class="glass-panel rounded-xl overflow-hidden group hover:border-primary/30 transition-all flex flex-col">
+<div class="aspect-video overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A macro photograph of an industrial IoT sensor module mounted on a steel surface. The lighting features a cool cyan glow emanating from the device indicators. The background is a clean, dark industrial setting with blurred machinery, emphasizing a high-tech, reliable engineering aesthetic in line with Southern IoT's technical precision theme." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmfHcC0oAgATyAgxuFgdzNgEEBVPSjuLMbFvqZE7ybCLwQ-h7_FkerRfzJXVtaJ4I-DtO-oJ2MBL67mPri7ncn5TTua1k9YxDUmwKiyydxL02DOgaD-HkQu8h4CENXE464aA48kP-c3_nPz9X_yr0U-OUJH6ZCvZvz8by0bSk7fNE8nqdFiHrIwrejgSZoU5GsKqec9DvdQdqxJFvaTBFPBfTb7XZ7xHficfJpIRazQuiWglt3x2mEu3C-yvNZBO2UrRfIw-0rHSI"/>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex items-center justify-between mb-4">
+<span class="text-secondary font-label-caps">Hardware</span>
+<span class="text-on-tertiary-container font-label-caps">12 Min Read</span>
+</div>
+<h3 class="font-headline-md text-white mb-4 group-hover:text-primary transition-colors">Optimizing LoRaWAN Gateway Placement for Dense Urban Environments</h3>
+<p class="font-body-sm text-on-surface-variant mb-6 flex-grow">A technical analysis of signal attenuation in metropolitan grids and strategic node positioning for 99.9% uptime.</p>
+<div class="flex items-center gap-3 pt-6 border-t border-white/5">
+<div class="w-8 h-8 rounded-full bg-primary-fixed-dim flex items-center justify-center text-on-primary-fixed font-bold text-xs">EK</div>
+<div>
+<p class="text-white font-label-caps text-[10px]">Elias Kaelin</p>
+<p class="text-on-surface-variant text-[10px]">Senior RF Engineer</p>
+</div>
+</div>
+</div>
+</article>
+<!-- Card 2 -->
+<article class="glass-panel rounded-xl overflow-hidden group hover:border-primary/30 transition-all flex flex-col">
+<div class="aspect-video overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A futuristic digital interface showing real-time security encryption protocols and data flows in a dark, high-contrast environment. The visual style uses thin lines, neon blue accents, and glass-like translucent panels. The overall atmosphere is secure, advanced, and mathematically precise, representing the robust security standards of Southern IoT connectivity solutions." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcBJfHxeFNy4IuWtCOLIDB_pim6VBjVreVsmjLz6FTwmd0U1C6kEI84gv0jY3ZeceRaqv95bDZH43ovSPcpAeKb_bh0WwJwmZYX0e31BHtRFPC-2dXPhXxGX3iET2T_yvImVFcyaniFuw2KnQcX6w2X_yhIrAQvcf5PDbBEDuAlQ8PEN6Ggubjc5GBKW_g2VYm84d4mzMwnALeX0LFKCygtuJrTzbPwhpBP2xv2pN8FjNjvLtW6cyYXrhJN3OKA_JPnpjOdvRhfcs"/>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex items-center justify-between mb-4">
+<span class="text-secondary font-label-caps">Security</span>
+<span class="text-on-tertiary-container font-label-caps">8 Min Read</span>
+</div>
+<h3 class="font-headline-md text-white mb-4 group-hover:text-primary transition-colors">Implementing Zero-Trust Architecture at the Network Edge</h3>
+<p class="font-body-sm text-on-surface-variant mb-6 flex-grow">Why perimeter defense is no longer enough for distributed industrial sensor networks and how to adapt.</p>
+<div class="flex items-center gap-3 pt-6 border-t border-white/5">
+<div class="w-8 h-8 rounded-full bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed font-bold text-xs">SH</div>
+<div>
+<p class="text-white font-label-caps text-[10px]">Sarah Chen</p>
+<p class="text-on-surface-variant text-[10px]">Head of Security</p>
+</div>
+</div>
+</div>
+</article>
+<!-- Card 3 -->
+<article class="glass-panel rounded-xl overflow-hidden group hover:border-primary/30 transition-all flex flex-col">
+<div class="aspect-video overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A clean, minimalist workspace featuring an open laptop showing a complex data visualization dashboard with nodes and connections. The lighting is soft and modern, utilizing a cool color temperature. The composition is airy and professional, embodying the user-centric and analytical software ecosystem of Southern IoT's data management platform." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzgy6pMKCHDxYvmryLhPz7ELw5GsCT39XT5SGtqSLtFYlcL0D0dU_kIokm_5BrcIn9fDGlSQbVzfF-0FQoDMSYjoj6JpZW1NJPqTo1wp-o9YueUayjyYLtgn7buiQbn62K1HX30qc-CgR-EDMAsUztVFr-Ryey0vek6Gg3YxINrYcNVydfT24D7ImF_2kqu6UMDk15v4m4XvuFfLo3WzQgb3wXykXirEtAcQZAPI5rjTgWJCdpDNfbDoio_cRSoZqmrmtO9GL7MDk"/>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex items-center justify-between mb-4">
+<span class="text-secondary font-label-caps">Connectivity</span>
+<span class="text-on-tertiary-container font-label-caps">15 Min Read</span>
+</div>
+<h3 class="font-headline-md text-white mb-4 group-hover:text-primary transition-colors">The 5G vs LoRaWAN Debate: Selecting the Right Protocol</h3>
+<p class="font-body-sm text-on-surface-variant mb-6 flex-grow">A deep dive into bandwidth, power consumption, and total cost of ownership for large-scale deployments.</p>
+<div class="flex items-center gap-3 pt-6 border-t border-white/5">
+<div class="w-8 h-8 rounded-full bg-tertiary-fixed-dim flex items-center justify-center text-on-tertiary-fixed font-bold text-xs">JM</div>
+<div>
+<p class="text-white font-label-caps text-[10px]">James Miller</p>
+<p class="text-on-surface-variant text-[10px]">Ecosystem Architect</p>
+</div>
+</div>
+</div>
+</article>
+</div>
+<!-- Bento Layout Extra Content -->
+<div class="mt-12 grid grid-cols-1 lg:grid-cols-3 gap-8">
+<div class="lg:col-span-2 glass-panel rounded-xl p-8 flex flex-col md:flex-row gap-8 items-center border-l-4 border-primary">
+<div class="flex-1">
+<span class="bg-primary/10 text-primary px-3 py-1 rounded-md font-label-caps text-[10px] mb-4 inline-block">Whitepaper</span>
+<h2 class="font-headline-lg text-white mb-4">State of Industrial IoT 2024</h2>
+<p class="text-on-surface-variant mb-6">Our annual comprehensive report on the trends shaping the next decade of precision connectivity. Download the full technical breakdown.</p>
+<button class="bg-primary text-on-primary px-8 py-3 rounded-lg font-headline-md text-sm hover:shadow-[0_0_20px_rgba(169,199,255,0.4)] transition-all active:scale-95">Download PDF</button>
+</div>
+<div class="w-full md:w-64 h-48 rounded-lg overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="A sophisticated abstract representation of global network connectivity. Glowing nodes are interconnected by thin white lines against a dark background, creating a map-like structure. The visual style is elegant and high-tech, using gradients of blue and white to suggest information flow and global reach, perfectly aligning with Southern IoT's vision of precision connectivity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZPaxrv76Z6tkV-saYVbzYk1gRk9F4xCG9Rq18iZOUfH-goVqzbcVyhq5GJO7KLhmVwpJMrq1CJUR-XNM2tbZR47APz_eD75_2g6JMr2i8IYagbH69av4ykcV7IuIiu2QJU-_ayNkQZiwrWAOIFRigwzi9QNy_QhLkhWyG9uBbrtrtzv1c8_GsYC5J4tcm68PU1XlFw_lS_Vq4xkS9njtwAUHfQroZiBrFULag3ROGgQTbpa7Fo5V3IWF0Smp9mm4x5CUSEhzidcc"/>
+</div>
+</div>
+<div class="glass-panel rounded-xl p-8 flex flex-col justify-center text-center">
+<span class="material-symbols-outlined text-secondary text-5xl mb-4" data-icon="mail" style="font-variation-settings: 'FILL' 1;">mail</span>
+<h3 class="font-headline-md text-white mb-2">Join the Feed</h3>
+<p class="text-on-surface-variant text-sm mb-6">Receive bi-weekly technical deep-dives directly in your inbox.</p>
+<div class="space-y-3">
+<input class="w-full bg-surface-container-high border-outline-variant rounded-lg px-4 py-3 text-sm focus:ring-primary focus:border-primary" placeholder="Email address" type="email"/>
+<button class="w-full bg-white text-slate-950 font-bold py-3 rounded-lg text-sm hover:bg-slate-200 transition-colors">Subscribe Now</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t border-white/5 bg-slate-950 mt-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 py-16 px-12 max-w-screen-2xl mx-auto">
+<div>
+<div class="text-lg font-black text-white mb-4 font-['Space_Grotesk']">Southern IoT</div>
+<p class="text-slate-500 font-['Space_Grotesk'] text-xs uppercase tracking-widest font-semibold mb-6">Precision Connectivity.</p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-slate-500 hover:text-blue-400 cursor-pointer transition-colors" data-icon="public">public</span>
+<span class="material-symbols-outlined text-slate-500 hover:text-blue-400 cursor-pointer transition-colors" data-icon="terminal">terminal</span>
+<span class="material-symbols-outlined text-slate-500 hover:text-blue-400 cursor-pointer transition-colors" data-icon="rss_feed">rss_feed</span>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="text-white font-label-caps text-sm mb-2">Company</h4>
+<a class="text-slate-500 hover:text-slate-200 transition-colors font-['Space_Grotesk'] text-xs uppercase tracking-widest font-semibold hover:underline decoration-blue-500 underline-offset-4" href="#">Privacy Policy</a>
+<a class="text-slate-500 hover:text-slate-200 transition-colors font-['Space_Grotesk'] text-xs uppercase tracking-widest font-semibold hover:underline decoration-blue-500 underline-offset-4" href="#">Terms of Service</a>
+<a class="text-slate-500 hover:text-slate-200 transition-colors font-['Space_Grotesk'] text-xs uppercase tracking-widest font-semibold hover:underline decoration-blue-500 underline-offset-4" href="#">Compliance</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="text-white font-label-caps text-sm mb-2">Support</h4>
+<a class="text-slate-500 hover:text-slate-200 transition-colors font-['Space_Grotesk'] text-xs uppercase tracking-widest font-semibold hover:underline decoration-blue-500 underline-offset-4" href="#">Contact Us</a>
+<a class="text-slate-500 hover:text-slate-200 transition-colors font-['Space_Grotesk'] text-xs uppercase tracking-widest font-semibold hover:underline decoration-blue-500 underline-offset-4" href="#">Global Support</a>
+<a class="text-slate-500 hover:text-slate-200 transition-colors font-['Space_Grotesk'] text-xs uppercase tracking-widest font-semibold hover:underline decoration-blue-500 underline-offset-4" href="#">Status Dashboard</a>
+</div>
+<div>
+<h4 class="text-white font-label-caps text-sm mb-4">Location</h4>
+<div class="rounded-lg overflow-hidden h-32 relative grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all">
+<img class="w-full h-full object-cover" data-alt="A stylized satellite view map of a modern tech hub at night. Glowing urban grids and transit lines represent data flow and connectivity. The image is rendered with a dark, high-contrast aesthetic using deep blues and whites, echoing Southern IoT's industrial and precise brand persona." data-location="Austin, TX" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYjtBT6RCadI50dEU7sGBBk9WdAHQUjnkSHFKkIOHu8Ne2QEcI4IHQmSAN_yCI3VtPUxUUtKm08wMCkejlw2s11ATUb_uzbHoto_T6hfUMGCuda0EbIV9zjtidZSQRv3loBk4C9eBNk44rTWLMMv_h9ShZtrhSkdW0nr7RhrIGts8K79yDhcS2Vq2lAJlIY0Uug2Gmmn96u9ox2BPc7pALVHOf1KVRdzLsZzcAtduG0ks43DpVjLlzaSS2jt3_Ay05kuZjcuN_7-0"/>
+</div>
+<p class="text-slate-500 font-['Space_Grotesk'] text-[10px] mt-3 tracking-widest uppercase">HQ: Austin, TX | Global Operations</p>
+</div>
+</div>
+<div class="max-w-screen-2xl mx-auto px-12 py-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+<span class="text-slate-500 font-['Space_Grotesk'] text-xs uppercase tracking-widest font-semibold">© 2024 Southern IoT. Precision Connectivity.</span>
+<div class="flex gap-6">
+<span class="text-blue-400 font-['Space_Grotesk'] text-xs uppercase tracking-widest font-semibold">All Systems Operational</span>
+</div>
+</div>
+</footer>
+</body></html>

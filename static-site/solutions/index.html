@@ -1,0 +1,405 @@
+﻿<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta name="description" content="Industrial IoT solutions for manufacturing, agriculture, infrastructure, and logistics."/>
+  <title>Solutions | Southern IoT</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <script>
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        "primary-container": "#002b5b",
+        "on-secondary": "#00344b",
+        "surface-bright": "#393939",
+        "tertiary-fixed": "#dfe3e7",
+        "tertiary": "#c3c7cb",
+        "surface-container-highest": "#353534",
+        "on-secondary-fixed-variant": "#004c6b",
+        "inverse-surface": "#e5e2e1",
+        "on-surface-variant": "#c4c6d0",
+        "on-primary": "#073060",
+        "background": "#131313",
+        "primary-fixed-dim": "#a9c7ff",
+        "on-tertiary-container": "#8f9397",
+        "secondary-fixed": "#c6e7ff",
+        "on-tertiary-fixed-variant": "#43474b",
+        "surface-container-low": "#1c1b1b",
+        "outline-variant": "#43474f",
+        "inverse-primary": "#405f91",
+        "surface-container-high": "#2a2a2a",
+        "surface-variant": "#353534",
+        "surface-dim": "#131313",
+        "tertiary-container": "#272c2f",
+        "tertiary-fixed-dim": "#c3c7cb",
+        "primary": "#a9c7ff",
+        "on-secondary-fixed": "#001e2d",
+        "error-container": "#93000a",
+        "error": "#ffb4ab",
+        "secondary-fixed-dim": "#83cfff",
+        "secondary": "#83cfff",
+        "on-background": "#e5e2e1",
+        "primary-fixed": "#d6e3ff",
+        "on-tertiary-fixed": "#171c1f",
+        "on-surface": "#e5e2e1",
+        "on-primary-container": "#7594ca",
+        "surface-tint": "#a9c7ff",
+        "surface-container-lowest": "#0e0e0e",
+        "outline": "#8d909a",
+        "surface": "#131313",
+        "surface-container": "#201f1f",
+        "on-tertiary": "#2c3134",
+        "on-error-container": "#ffdad6",
+        "on-primary-fixed-variant": "#264778",
+        "on-error": "#690005",
+        "inverse-on-surface": "#313030",
+        "secondary-container": "#03a8e8",
+        "on-secondary-container": "#003952",
+        "on-primary-fixed": "#001b3d"
+      },
+      borderRadius: { DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px" },
+      spacing: { gutter: "24px", md: "16px", xxl: "48px", sm: "8px", xl: "32px", "container-max": "1440px", xs: "4px", unit: "8px", lg: "24px" },
+      fontFamily: { "headline-md": ["Space Grotesk"], "body-lg": ["Inter"], "body-sm": ["Inter"], "label-caps": ["Inter"], "headline-lg": ["Space Grotesk"], "display": ["Space Grotesk"], "body-md": ["Inter"] },
+      fontSize: {
+        "headline-md": ["24px", {lineHeight: "1.3", fontWeight: "600"}],
+        "body-lg": ["18px", {lineHeight: "1.6", fontWeight: "400"}],
+        "body-sm": ["14px", {lineHeight: "1.5", fontWeight: "400"}],
+        "label-caps": ["12px", {lineHeight: "1", letterSpacing: "0.08em", fontWeight: "700"}],
+        "headline-lg": ["32px", {lineHeight: "1.2", fontWeight: "600"}],
+        "display": ["48px", {lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700"}],
+        "body-md": ["16px", {lineHeight: "1.5", fontWeight: "400"}]
+      }
+    }
+  }
+}
+</script>
+  <link rel="stylesheet" href="../css/shared.css"/>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary/30 industrial-grid min-h-screen flex flex-col">
+<nav class="fixed top-0 w-full z-50 border-b bg-slate-950/80 backdrop-blur-md border-white/10 shadow-[0_4px_20px_rgba(0,43,91,0.3)]">
+  <div class="nav-shell flex items-center justify-between px-6 md:px-8 py-4 max-w-screen-2xl mx-auto">
+    <a class="flex items-center gap-3 text-white font-['Space_Grotesk']" href="../"><img class="brand-logo" src="../assets/images/slogo.png" alt="Southern IoT logo"/><span class="text-xl md:text-2xl font-bold tracking-tighter">Southern IoT</span></a>
+    <div class="hidden md:flex items-center gap-5 lg:gap-8 font-['Space_Grotesk'] text-sm font-medium tracking-wide">
+      <a class="text-slate-400 hover:text-white transition-colors duration-200 hover:bg-white/5 rounded-md px-3 py-2" href="../">Home</a><a class="text-slate-400 hover:text-white transition-colors duration-200 hover:bg-white/5 rounded-md px-3 py-2" href="../about/">About</a><a class="text-blue-400 border-b-2 border-blue-500 pb-1" href="../solutions/">Solutions</a><a class="text-slate-400 hover:text-white transition-colors duration-200 hover:bg-white/5 rounded-md px-3 py-2" href="../products/">Products</a><a class="text-slate-400 hover:text-white transition-colors duration-200 hover:bg-white/5 rounded-md px-3 py-2" href="../ecosystem/">Ecosystem</a><a class="text-slate-400 hover:text-white transition-colors duration-200 hover:bg-white/5 rounded-md px-3 py-2" href="../blog/">Blog</a><a class="text-slate-400 hover:text-white transition-colors duration-200 hover:bg-white/5 rounded-md px-3 py-2" href="../support/">Support</a>
+    </div>
+    <div class="flex items-center gap-3">
+      <div class="hidden lg:flex items-center gap-3 text-slate-400" aria-hidden="true">
+        <span class="material-symbols-outlined text-xl">language</span>
+        <span class="material-symbols-outlined text-xl">dark_mode</span>
+      </div>
+      <a class="hidden sm:inline-flex bg-primary-container text-white px-5 py-2 rounded-lg font-headline-md text-sm active:scale-95 transform transition-transform hover:shadow-[0_0_15px_rgba(3,168,232,0.4)]" href="../support/">Get Started</a>
+      <button id="mobile-menu-btn" class="md:hidden glass-panel rounded-lg p-2 text-white" aria-label="Toggle navigation">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+    </div>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden flex-col gap-1 px-6 pb-6 font-['Space_Grotesk'] text-sm bg-slate-950/95 border-t border-white/10">
+    <a class="text-slate-300 px-4 py-3 rounded-lg hover:bg-white/5" href="../">Home</a><a class="text-slate-300 px-4 py-3 rounded-lg hover:bg-white/5" href="../about/">About</a><a class="text-blue-400 px-4 py-3 rounded-lg hover:bg-white/5" href="../solutions/">Solutions</a><a class="text-slate-300 px-4 py-3 rounded-lg hover:bg-white/5" href="../products/">Products</a><a class="text-slate-300 px-4 py-3 rounded-lg hover:bg-white/5" href="../ecosystem/">Ecosystem</a><a class="text-slate-300 px-4 py-3 rounded-lg hover:bg-white/5" href="../blog/">Blog</a><a class="text-slate-300 px-4 py-3 rounded-lg hover:bg-white/5" href="../support/">Support</a>
+    <a class="mt-2 bg-primary-container text-white px-4 py-3 rounded-lg text-center" href="../support/">Get Started</a>
+  </div>
+</nav>
+<main class="flex-grow pt-32 pb-24">
+<!-- Hero Section -->
+<section class="max-w-screen-2xl mx-auto px-8 mb-24">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-7">
+<span class="font-label-caps text-primary mb-4 block">Industry-Specific Ecosystems</span>
+<h1 class="font-display text-display text-white mb-6 leading-tight">
+                        Communication for <br/><span class="gradient-text">Mission Critical</span> Ops.
+                    </h1>
+<p class="font-body-lg text-on-surface-variant max-w-2xl mb-8">
+                        Southern IoT integrates high-fidelity sensor arrays with resilient network architectures to deliver real-time intelligence across manufacturing, agriculture, and urban landscapes.
+                    </p>
+<div class="flex gap-4">
+<button class="bg-secondary-container text-on-secondary-container px-8 py-4 rounded-xl font-headline-md flex items-center gap-3 hover:brightness-110 transition-all">
+                            Technical Whitepaper
+                            <span class="material-symbols-outlined">download</span>
+</button>
+<button class="glass-panel text-white px-8 py-4 rounded-xl font-headline-md flex items-center gap-3 hover:bg-white/10 transition-all">
+                            Speak to an Architect
+                        </button>
+</div>
+</div>
+<div class="lg:col-span-5 relative">
+<div class="absolute inset-0 bg-primary/20 blur-[120px] rounded-full"></div>
+<div class="glass-panel rounded-xxl p-2 relative overflow-hidden">
+<img class="w-full rounded-xl object-cover aspect-square opacity-80" data-alt="A highly detailed industrial close-up of a futuristic circuit board glowing with electric blue neon light trails, representing data flow within a smart factory environment. The background is a dark, sleek laboratory with soft ambient reflections of machinery and technical screens. The aesthetic is extremely sharp, focusing on technical precision and innovative hardware engineering with a professional corporate dark-mode feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmFiU6wo6e44AuCKjZde1_6V1z5hMgRg1Dsv5pzDXjfV3neta6FBnWRiyh06Q52dE5xnTaa1I3ws1i_xyAlPQjTJsX1BH-7HTnQWbPMsIjDrDh8OFHLdweLzH6gt0qFhz5yCTc-7i7U9gUtp_JpVNO4RzvYa463UtmACVW0AojXYnoTpE1ITx_fYcsBat6LwQUWm3mmvxO8WjKOC-bE4aEwbdFAHGHzMRD3YCfyhaVsAqVdnAxcPx7FlPktqOng5WeSJyjndcOJu0"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Solutions Bento Grid -->
+<section class="max-w-screen-2xl mx-auto px-8 mb-32">
+<div class="flex items-end justify-between mb-12">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-white">Application Architectures</h2>
+<p class="text-on-surface-variant mt-2">End-to-end solutions engineered for vertical-specific constraints.</p>
+</div>
+<div class="hidden md:block">
+<span class="text-xs font-label-caps text-outline uppercase">Scroll to explore sectors</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Smart Manufacturing -->
+<div class="glass-panel rounded-xxl p-8 group hover:border-primary/50 transition-all duration-500">
+<div class="w-14 h-14 bg-primary-container rounded-xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-3xl">precision_manufacturing</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-white mb-4">Smart Manufacturing</h3>
+<p class="font-body-md text-on-surface-variant mb-8">Implementing high-density sensor networks for predictive maintenance and real-time OEE tracking.</p>
+<ul class="space-y-4 mb-8">
+<li class="flex items-center gap-3 text-sm">
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+                            Vibration and Thermal Monitoring
+                        </li>
+<li class="flex items-center gap-3 text-sm">
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+                            Sub-10ms Latency Control Loops
+                        </li>
+<li class="flex items-center gap-3 text-sm">
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+                            Legacy PLC Integration (Modbus/MQTT)
+                        </li>
+</ul>
+<div class="pt-6 border-t border-white/5">
+<div class="flex items-center justify-between text-xs font-label-caps text-primary">
+<span>Efficiency Gain</span>
+<span>+34%</span>
+</div>
+</div>
+</div>
+<!-- Precision Agriculture -->
+<div class="glass-panel rounded-xxl p-8 group hover:border-primary/50 transition-all duration-500">
+<div class="w-14 h-14 bg-primary-container rounded-xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-3xl">agriculture</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-white mb-4">Precision Agriculture</h3>
+<p class="font-body-md text-on-surface-variant mb-8">Massive-scale LoRaWAN deployments for soil telemetry and automated irrigation management.</p>
+<ul class="space-y-4 mb-8">
+<li class="flex items-center gap-3 text-sm">
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+                            Multi-depth Soil Moisture Arrays
+                        </li>
+<li class="flex items-center gap-3 text-sm">
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+                            Satellite-Hybrid Gateway Links
+                        </li>
+<li class="flex items-center gap-3 text-sm">
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+                            NPK Nutrient Level Telemetry
+                        </li>
+</ul>
+<div class="pt-6 border-t border-white/5">
+<div class="flex items-center justify-between text-xs font-label-caps text-primary">
+<span>Water Conservation</span>
+<span>-42%</span>
+</div>
+</div>
+</div>
+<!-- Urban Infrastructure -->
+<div class="glass-panel rounded-xxl p-8 group hover:border-primary/50 transition-all duration-500">
+<div class="w-14 h-14 bg-primary-container rounded-xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-3xl">location_city</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-white mb-4">Urban Infrastructure</h3>
+<p class="font-body-md text-on-surface-variant mb-8">Smart city frameworks focusing on structural health monitoring and resource management.</p>
+<ul class="space-y-4 mb-8">
+<li class="flex items-center gap-3 text-sm">
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+                            Bridge/Overpass Strain Sensors
+                        </li>
+<li class="flex items-center gap-3 text-sm">
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+                            Smart Lighting &amp; Grid Balancing
+                        </li>
+<li class="flex items-center gap-3 text-sm">
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+                            Air Quality &amp; Sound Level Mapping
+                        </li>
+</ul>
+<div class="pt-6 border-t border-white/5">
+<div class="flex items-center justify-between text-xs font-label-caps text-primary">
+<span>Uptime Reliability</span>
+<span>99.99%</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Technical Deep Dive (Diagram Section) -->
+<section class="max-w-screen-2xl mx-auto px-8 mb-32">
+<div class="glass-panel rounded-[2rem] p-12 overflow-hidden relative">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative z-10">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-white mb-8">Unified Connectivity Fabric</h2>
+<div class="space-y-8">
+<div class="flex gap-6">
+<div class="shrink-0 w-12 h-12 glass-panel flex items-center justify-center rounded-lg border-primary/30">
+<span class="material-symbols-outlined text-primary">router</span>
+</div>
+<div>
+<h4 class="font-headline-md text-body-lg text-white mb-2">Multi-Protocol Edge Gateways</h4>
+<p class="text-on-surface-variant text-sm">Hardware-level support for NB-IoT, Cat-M1, and LoRaWAN, enabling hybrid network topologies in complex industrial environments.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="shrink-0 w-12 h-12 glass-panel flex items-center justify-center rounded-lg border-primary/30">
+<span class="material-symbols-outlined text-primary">security</span>
+</div>
+<div>
+<h4 class="font-headline-md text-body-lg text-white mb-2">Zero-Trust Device Identity</h4>
+<p class="text-on-surface-variant text-sm">End-to-end hardware encryption with Secure Elements (SE) and rotatable cryptographic keys at the physical layer.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="shrink-0 w-12 h-12 glass-panel flex items-center justify-center rounded-lg border-primary/30">
+<span class="material-symbols-outlined text-primary">monitoring</span>
+</div>
+<div>
+<h4 class="font-headline-md text-body-lg text-white mb-2">Autonomous Edge Logic</h4>
+<p class="text-on-surface-variant text-sm">Distributed computing power allows for critical decision-making locally, reducing cloud dependency and latency.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="relative">
+<img class="w-full rounded-2xl shadow-2xl border border-white/10" data-alt="A sophisticated technical diagram of a global IoT mesh network displayed on a semi-transparent digital glass screen. Glowing nodes and thin light-blue lines interconnect various industrial icons like wind turbines, cargo ships, and factory silhouettes. The scene is set in a dark mission control room with professional bokeh background, emphasizing high-level connectivity and systemic reliability in a futuristic tech-centered environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcYGlZiSh8ktqy2kGaCP8pNbEuOnXTKA79Z6qWDKk42TPV8fkaZpRPBo3G6Ydq6_yzpj5VcuxVRNV3FO2SvUbNrXvUS4S_I7Scv89M1Lsj8NJmZGF5FKXS67Ie-fL5r83az92BeQ3CS48sBymr_1f3pn3cYd2TrXLl-lKYjI02hR7hlVZ-oHD-agUEzbEv6av9q8OBA-hubDlhZrZXoxJpc2fn-JAaI1iTWGd38P3xFDWdQd88yDlZW4e9KzESopsOOFRYZ8O9OII"/>
+<!-- Floating Data Stats -->
+<div class="absolute -top-4 -right-4 glass-panel p-4 rounded-xl shadow-xl animate-pulse">
+<div class="text-[10px] font-label-caps text-outline uppercase mb-1">Packet Loss</div>
+<div class="text-xl font-headline-md text-primary">&lt; 0.001%</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Case Study Snippet -->
+<section class="max-w-screen-2xl mx-auto px-8">
+<div class="text-center mb-16">
+<span class="font-label-caps text-primary">In Practice</span>
+<h2 class="font-headline-lg text-headline-lg text-white mt-2">Operational Excellence</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="bg-surface-container rounded-xxl p-1 relative overflow-hidden border border-white/5">
+<div class="flex flex-col md:flex-row h-full">
+<div class="md:w-1/3 h-48 md:h-auto overflow-hidden">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="A clean, minimalist aerial view of a massive solar power farm in a desert landscape during golden hour. The long rows of navy blue solar panels create a rhythmic, geometric pattern on the sand. The image captures the scale and high-tech nature of renewable energy infrastructure, emphasizing efficiency and environmental sustainability with a crisp, modern photographic style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1sLCAK-8RxLQzJQ4ViT4UNfw8nmew2knb7kM2Y4kcodC-lB-mbeSAUQaDoqDTjEPZO8N0qbmz_brCck21l8WyyrSJdIA3QVpGJYL2BcJrWvw5dUuuHllTP8-kqhCa0SoV2AfgiP4DKxw0oYmFOR44y2OrxOAt6DIt3vw0B9i8yCRRMJMoCluL3udLXJ_tRXvH7nSZfvLw9DMYYCmUdj5ruGIQjqnoJ6syIkTZDmtkbsARTsntZKIp0sG5yQsffYCFr9ugbIp-xew"/>
+</div>
+<div class="p-8 md:w-2/3 flex flex-col justify-center">
+<h4 class="text-primary font-label-caps mb-2">Renewable Energy</h4>
+<h3 class="font-headline-md text-white mb-4">Grid Balancing for Apex Solar</h3>
+<p class="text-on-surface-variant text-sm mb-6">Southern IoT deployed a low-latency feedback network for 500+ solar inverters, optimizing grid output based on micro-climatic shifts.</p>
+<a class="text-primary text-sm font-semibold flex items-center gap-2 group" href="#">
+                                Read Full Case Study
+                                <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<div class="bg-surface-container rounded-xxl p-1 relative overflow-hidden border border-white/5">
+<div class="flex flex-col md:flex-row h-full">
+<div class="md:w-1/3 h-48 md:h-auto overflow-hidden">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="A sleek, modern logistics warehouse interior at night with subtle blue floor lighting marking the paths for automated robots. Towering shelves filled with boxes extend into the distance under a vast, dark ceiling. The image conveys a sense of quiet, high-tech efficiency and large-scale industrial organization, utilizing a clean and professional dark-mode color palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAw7uKViSeKjzyA0LC11sp768VH6GOSG1Q2_t6wqSCjBccROSLT6hNp0fs5TUE9off0mxlfvIGx4w2oosA_oUFVACVPe7k9g8Segpy8dPTRcrCRaHzj6fZ841fk1I6nMJMP0bawo1a_xVn0h4uGcDv3Z6sRpSNIL-gHbMLtdm_TyLC0JoLklWe6HMZzMvJv4mkaLmS4NlbmrA6p4ER6hg2m8YTcwDWiE_XjtUtt7NMwzZtAR4mkwaSLmAFIVz630iw1T04H4vWHh2c"/>
+</div>
+<div class="p-8 md:w-2/3 flex flex-col justify-center">
+<h4 class="text-primary font-label-caps mb-2">Logistics</h4>
+<h3 class="font-headline-md text-white mb-4">Real-Time Fleet Telemetry</h3>
+<p class="text-on-surface-variant text-sm mb-6">Integration of satellite trackers and cold-chain temperature sensors for global pharmaceutical logistics provider.</p>
+<a class="text-primary text-sm font-semibold flex items-center gap-2 group" href="#">
+                                Read Full Case Study
+                                <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Product-Led Solutions -->
+<section class="max-w-screen-2xl mx-auto px-8 mt-24">
+<div class="glass-panel rounded-[2rem] p-8 md:p-12">
+<div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-10">
+<div>
+<span class="font-label-caps text-primary">Product-Led Deployments</span>
+<h2 class="font-headline-lg text-white mt-3">Products matched to operational problems</h2>
+</div>
+<a class="text-primary font-semibold flex items-center gap-2" href="../products/">Open Product Catalog <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<article class="bg-surface-container rounded-xl p-6 border border-white/5">
+<span class="material-symbols-outlined text-primary text-3xl mb-5 block">energy_savings_leaf</span>
+<h3 class="font-headline-md text-white mb-3">Energy Monitoring</h3>
+<p class="text-on-surface-variant text-sm mb-5">CareFlow V1 and Energy Monitoring V2 capture generator and three-phase electrical metrics over Modbus and LoRaWAN.</p>
+<p class="font-label-caps text-primary">CareFlow V1 / RAK3173</p>
+</article>
+<article class="bg-surface-container rounded-xl p-6 border border-white/5">
+<span class="material-symbols-outlined text-primary text-3xl mb-5 block">home_iot_device</span>
+<h3 class="font-headline-md text-white mb-3">Smart Facilities</h3>
+<p class="text-on-surface-variant text-sm mb-5">Multi-zone automation synchronizes physical switches, relays, PIR sensing, and access control through Home Assistant.</p>
+<p class="font-label-caps text-primary">ESP32 / ESPHome</p>
+</article>
+<article class="bg-surface-container rounded-xl p-6 border border-white/5">
+<span class="material-symbols-outlined text-primary text-3xl mb-5 block">precision_manufacturing</span>
+<h3 class="font-headline-md text-white mb-3">Fabrication</h3>
+<p class="text-on-surface-variant text-sm mb-5">Router CNC and Laser CNC machines support prototyping, panels, enclosures, marking, engraving, and fabrication workflows.</p>
+<p class="font-label-caps text-primary">Router CNC / Laser CNC</p>
+</article>
+<article class="bg-surface-container rounded-xl p-6 border border-white/5">
+<span class="material-symbols-outlined text-primary text-3xl mb-5 block">monitoring</span>
+<h3 class="font-headline-md text-white mb-3">Embedded Lab Tools</h3>
+<p class="text-on-surface-variant text-sm mb-5">Pocket Oscilloscope v3 gives field engineers a portable signal inspection tool with display, battery, and calibration workflow.</p>
+<p class="font-label-caps text-primary">RP2040 / ILI9341</p>
+</article>
+</div>
+</div>
+</section>
+</main>
+<footer class="w-full border-t border-white/5 bg-slate-950 mt-auto">
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 py-16 px-8 md:px-12 max-w-screen-2xl mx-auto">
+    <div>
+      <a class="flex items-center gap-3 text-white mb-4 font-['Space_Grotesk']" href="../"><img class="footer-logo" src="../assets/images/slogo.png" alt="Southern IoT logo"/><span class="text-lg font-black">Southern IoT</span></a>
+      <p class="text-slate-500 text-sm leading-relaxed mb-6">Communication for all</p>
+      <div class="flex gap-4">
+        <a class="w-9 h-9 rounded bg-white/5 flex items-center justify-center text-slate-400 hover:text-primary transition-colors" href="#" aria-label="Website"><span class="material-symbols-outlined text-base">public</span></a>
+        <a class="w-9 h-9 rounded bg-white/5 flex items-center justify-center text-slate-400 hover:text-primary transition-colors" href="#" aria-label="Developer tools"><span class="material-symbols-outlined text-base">terminal</span></a>
+        <a class="w-9 h-9 rounded bg-white/5 flex items-center justify-center text-slate-400 hover:text-primary transition-colors" href="../blog/"><span class="material-symbols-outlined text-base">rss_feed</span></a>
+      </div>
+    </div>
+    <div class="flex flex-col gap-4">
+      <span class="font-['Space_Grotesk'] text-xs uppercase tracking-widest font-semibold text-blue-500">Company</span>
+      <a class="text-slate-500 hover:text-slate-200 transition-colors text-xs font-semibold" href="../about/">About</a>
+      <a class="text-slate-500 hover:text-slate-200 transition-colors text-xs font-semibold" href="../products/">Products</a>
+      <a class="text-slate-500 hover:text-slate-200 transition-colors text-xs font-semibold" href="#">Privacy Policy</a>
+      <a class="text-slate-500 hover:text-slate-200 transition-colors text-xs font-semibold" href="#">Terms of Service</a>
+      <a class="text-slate-500 hover:text-slate-200 transition-colors text-xs font-semibold" href="#">Compliance</a>
+    </div>
+    <div class="flex flex-col gap-4">
+      <span class="font-['Space_Grotesk'] text-xs uppercase tracking-widest font-semibold text-blue-500">Support</span>
+      <a class="text-slate-500 hover:text-slate-200 transition-colors text-xs font-semibold" href="../support/">Contact Us</a>
+      <a class="text-slate-500 hover:text-slate-200 transition-colors text-xs font-semibold" href="../support/">Global Support</a>
+      <a class="text-slate-500 hover:text-slate-200 transition-colors text-xs font-semibold" href="../support/">Status Dashboard</a>
+    </div>
+    <div class="flex flex-col gap-4">
+      <span class="font-['Space_Grotesk'] text-xs uppercase tracking-widest font-semibold text-blue-500">Contact</span>
+      <div class="text-slate-500 text-xs font-semibold">Sales: +1 (800) IOT-PREC</div>
+      <div class="text-slate-500 text-xs font-semibold">HQ: Austin, TX | Global Operations</div>
+    </div>
+  </div>
+  <div class="max-w-screen-2xl mx-auto px-8 md:px-12 py-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+    <span class="text-slate-500 font-['Space_Grotesk'] text-xs uppercase tracking-widest font-semibold">&copy; 2024 Southern IoT. Communication for all.</span>
+    <span class="text-blue-400 font-['Space_Grotesk'] text-xs uppercase tracking-widest font-semibold">ALL SYSTEMS OPERATIONAL</span>
+  </div>
+</footer>
+<script>
+document.getElementById('mobile-menu-btn')?.addEventListener('click', () => {
+  const menu = document.getElementById('mobile-menu');
+  menu?.classList.toggle('hidden');
+  menu?.classList.toggle('flex');
+});
+</script>
+</body>
+</html>

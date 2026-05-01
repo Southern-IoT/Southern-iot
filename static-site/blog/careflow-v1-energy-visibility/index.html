@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta name="description" content="CareFlow V1 and the practical discipline of remote energy visibility."/>
+  <title>CareFlow V1 and Remote Energy Visibility | The Edge Feed</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../../css/shared.css"/>
+</head>
+<body class="bg-[#131313] text-[#e5e2e1] font-['Inter'] selection:bg-[#a9c7ff]/30 industrial-grid min-h-screen flex flex-col">
+<nav class="fixed top-0 w-full z-50 border-b bg-slate-950/80 backdrop-blur-md border-white/10 shadow-[0_4px_20px_rgba(0,43,91,0.3)]">
+  <div class="nav-shell flex items-center justify-between px-6 md:px-8 py-4 max-w-screen-2xl mx-auto">
+    <a class="flex items-center gap-3 text-white font-['Space_Grotesk']" href="../../"><img class="brand-logo" src="../../assets/images/slogo.png" alt="Southern IoT logo"/><span class="text-xl md:text-2xl font-bold tracking-tighter">Southern IoT</span></a>
+    <div class="hidden md:flex items-center gap-5 lg:gap-8 font-['Space_Grotesk'] text-sm font-medium tracking-wide">
+      <a class="text-slate-400 hover:text-white transition-colors duration-200 hover:bg-white/5 rounded-md px-3 py-2" href="../../">Home</a><a class="text-slate-400 hover:text-white transition-colors duration-200 hover:bg-white/5 rounded-md px-3 py-2" href="../../about/">About</a><a class="text-slate-400 hover:text-white transition-colors duration-200 hover:bg-white/5 rounded-md px-3 py-2" href="../../solutions/">Solutions</a><a class="text-slate-400 hover:text-white transition-colors duration-200 hover:bg-white/5 rounded-md px-3 py-2" href="../../products/">Products</a><a class="text-slate-400 hover:text-white transition-colors duration-200 hover:bg-white/5 rounded-md px-3 py-2" href="../../ecosystem/">Ecosystem</a><a class="text-blue-400 border-b-2 border-blue-500 pb-1" href="../../blog/">Blog</a><a class="text-slate-400 hover:text-white transition-colors duration-200 hover:bg-white/5 rounded-md px-3 py-2" href="../../support/">Support</a>
+    </div>
+    <button id="mobile-menu-btn" class="md:hidden glass-panel rounded-lg p-2 text-white" aria-label="Toggle navigation"><span class="material-symbols-outlined">menu</span></button>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden flex-col gap-1 px-6 pb-6 font-['Space_Grotesk'] text-sm bg-slate-950/95 border-t border-white/10">
+    <a class="text-slate-300 px-4 py-3 rounded-lg hover:bg-white/5" href="../../">Home</a><a class="text-slate-300 px-4 py-3 rounded-lg hover:bg-white/5" href="../../about/">About</a><a class="text-slate-300 px-4 py-3 rounded-lg hover:bg-white/5" href="../../solutions/">Solutions</a><a class="text-slate-300 px-4 py-3 rounded-lg hover:bg-white/5" href="../../products/">Products</a><a class="text-slate-300 px-4 py-3 rounded-lg hover:bg-white/5" href="../../ecosystem/">Ecosystem</a><a class="text-blue-400 px-4 py-3 rounded-lg hover:bg-white/5" href="../../blog/">Blog</a><a class="text-slate-300 px-4 py-3 rounded-lg hover:bg-white/5" href="../../support/">Support</a>
+  </div>
+</nav>
+
+<main class="flex-grow pt-32 pb-24">
+  <article class="max-w-4xl mx-auto px-8">
+    <a class="inline-flex items-center gap-2 text-[#a9c7ff] font-semibold mb-10" href="../"><span class="material-symbols-outlined text-base">arrow_back</span> Back to The Edge Feed</a>
+    <header class="border-b border-white/10 pb-10 mb-10">
+      <span class="font-['Inter'] text-xs uppercase tracking-[0.08em] font-bold text-[#83cfff]">Industrial IoT</span>
+      <h1 class="font-['Space_Grotesk'] text-4xl md:text-6xl font-bold leading-tight text-white mt-5 mb-6">CareFlow V1 and the practical discipline of remote energy visibility</h1>
+      <p class="text-xl leading-8 text-[#c4c6d0]">A reliable energy monitor is not only a sensor package. It is a communication strategy for sites where the most important events happen far away from a stable network.</p>
+      <div class="flex flex-wrap gap-4 text-sm text-slate-500 mt-8"><span>May 2, 2026</span><span>Southern IoT Engineering</span><span>9 min read</span></div>
+    </header>
+
+    <div class="article-body">
+      <p>CareFlow V1 started from a familiar industrial problem: operators need to understand generator health and power stability, but the assets often sit in locations where cellular coverage is expensive, inconsistent, or simply unavailable at the moment something important happens. A dashboard is useful only after the data survives the field.</p>
+      <p>That changed the design priority. The system could not be a cloud-first gadget that assumes perfect connectivity. It needed local collection, local tolerance, and long-range communication. The architecture combines Modbus RTU for dependable equipment data, an ESP32 for edge processing, a RAK3172 LoRaWAN module for transport, and a hardened enclosure strategy for field deployment.</p>
+
+      <h2>The field is the real specification</h2>
+      <p>Remote energy monitoring has a habit of exposing weak assumptions. A bench prototype may read voltage, current, frequency, and energy data correctly, but a field node has to deal with heat, dust, vibration, power interruption, antenna placement, and maintenance access. CareFlow V1 treats those constraints as first-class requirements.</p>
+      <p>The enclosure and PCB are not decoration. They protect the measurement chain and make installation repeatable. The communication design is equally physical: antenna orientation, gateway distance, and signal margin become part of the product, not afterthoughts added during installation.</p>
+
+      <blockquote>In industrial IoT, uptime is often decided before the first packet reaches the cloud.</blockquote>
+
+      <h2>Why LoRaWAN fits the job</h2>
+      <p>LoRaWAN is not the highest-bandwidth option, and that is exactly why it works here. Generator and power-line telemetry usually needs small, structured updates rather than continuous media streams. A compact payload can carry the values an operator needs: voltage, current, frequency, power factor, load behavior, fault state, and timestamps.</p>
+      <p>For sites spread across a campus, farm, industrial yard, or remote facility, long-range low-power communication can be more practical than maintaining a cellular plan for every node. The target is not glamorous throughput. The target is reliable situational awareness.</p>
+
+      <h2>Offline buffering changes operator trust</h2>
+      <p>The most painful monitoring failures are invisible ones. A node goes offline, data disappears, and the operator later discovers that the most important period was never recorded. CareFlow V1 addresses this with a 72-hour buffering model so the device can preserve telemetry when the network is down and forward it when the link returns.</p>
+      <p>This is a small implementation detail with a large operational effect. It turns intermittent connectivity from a data-loss event into a delay. The dashboard may not be live for a period, but the history remains recoverable.</p>
+
+      <h2>Dashboards should reduce noise</h2>
+      <p>Energy systems generate more numbers than most teams can use during an incident. A good interface should not flatten every measurement into equal importance. It should show the values that explain the state of the generator and the risk to the site.</p>
+      <p>For CareFlow V1, that means highlighting load behavior, abnormal frequency movement, communication status, recent outages, and threshold events. The product is not finished when data arrives. It is finished when a human can decide what to do next.</p>
+
+      <h2>Where the product goes next</h2>
+      <p>The next version can improve antenna performance, analytics, and three-phase interpretation. But the core principle should stay the same: collect trustworthy data at the edge, survive imperfect connectivity, and communicate clearly enough that operators can act.</p>
+      <p>That is what Southern IoT means by communication for all. Not just more devices online, but more useful signals reaching the people responsible for real equipment.</p>
+
+      <p><a href="../../products/">View CareFlow V1 in the product catalog</a></p>
+    </div>
+  </article>
+</main>
+
+<footer class="w-full border-t border-white/5 bg-slate-950 mt-auto">
+  <div class="max-w-screen-2xl mx-auto px-8 md:px-12 py-8 flex flex-col md:flex-row justify-between items-center gap-4">
+    <span class="text-slate-500 font-['Space_Grotesk'] text-xs uppercase tracking-widest font-semibold">&copy; 2024 Southern IoT. Communication for all.</span>
+    <span class="text-blue-400 font-['Space_Grotesk'] text-xs uppercase tracking-widest font-semibold">ALL SYSTEMS OPERATIONAL</span>
+  </div>
+</footer>
+<script>
+document.getElementById('mobile-menu-btn')?.addEventListener('click', () => {
+  const menu = document.getElementById('mobile-menu');
+  menu?.classList.toggle('hidden');
+  menu?.classList.toggle('flex');
+});
+</script>
+</body>
+</html>
