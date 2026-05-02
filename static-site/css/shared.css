@@ -135,6 +135,145 @@ body {
   text-decoration: underline;
   text-underline-offset: 4px;
 }
+.theme-fab {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 80;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 10px 14px;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: #e5e2e1;
+  background: rgba(15, 23, 42, 0.82);
+  backdrop-filter: blur(16px);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.28);
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+}
+.theme-fab:hover {
+  border-color: rgba(169, 199, 255, 0.6);
+  color: #a9c7ff;
+}
+.product-card {
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.18);
+}
+.product-art {
+  background: rgba(255, 255, 255, 0.04);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+.filter-panel {
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+html.light body {
+  background-color: #fbf9f8 !important;
+  color: #1b1c1c !important;
+}
+html.light .industrial-grid {
+  background-image: radial-gradient(circle at 1px 1px, rgba(0, 69, 165, 0.11) 1px, transparent 0);
+}
+html.light .glass-panel {
+  background: rgba(255, 255, 255, 0.78);
+  border-color: rgba(27, 28, 28, 0.12);
+  box-shadow: 0 16px 42px rgba(15, 23, 42, 0.08);
+}
+html.light .bg-background,
+html.light .bg-surface,
+html.light .bg-surface-container-lowest {
+  background-color: #fbf9f8 !important;
+}
+html.light .bg-surface-container-low {
+  background-color: #f6f3f2 !important;
+}
+html.light .bg-surface-container,
+html.light .bg-surface-container-high,
+html.light .bg-surface-container-highest,
+html.light .bg-surface-variant {
+  background-color: #f0eded !important;
+}
+html.light .bg-slate-950,
+html.light .bg-slate-950\/80,
+html.light .bg-slate-950\/95 {
+  background-color: rgba(255, 255, 255, 0.92) !important;
+}
+html.light .bg-primary-container,
+html.light .bg-primary {
+  background-color: #075cd3 !important;
+  color: #ffffff !important;
+}
+html.light .bg-secondary-container {
+  background-color: #0045a5 !important;
+  color: #ffffff !important;
+}
+html.light .text-white,
+html.light .text-on-background,
+html.light .text-on-surface {
+  color: #1b1c1c !important;
+}
+html.light .text-on-surface-variant,
+html.light .text-slate-300,
+html.light .text-slate-400,
+html.light .text-slate-500 {
+  color: #424654 !important;
+}
+html.light .text-primary,
+html.light .text-blue-400 {
+  color: #0045a5 !important;
+}
+html.light .text-secondary {
+  color: #075cd3 !important;
+}
+html.light .text-on-primary,
+html.light .text-on-secondary-container,
+html.light .bg-primary .text-on-primary,
+html.light .bg-primary-container .text-white {
+  color: #ffffff !important;
+}
+html.light .border-white\/10,
+html.light .border-white\/5,
+html.light .border-slate-800 {
+  border-color: rgba(27, 28, 28, 0.12) !important;
+}
+html.light [class*="bg-white/"] {
+  background-color: rgba(255, 255, 255, 0.72) !important;
+}
+html.light [class*="bg-black/"] {
+  background-color: rgba(255, 255, 255, 0.72) !important;
+}
+html.light .theme-fab {
+  color: #1b1c1c;
+  background: rgba(255, 255, 255, 0.9);
+  border-color: rgba(27, 28, 28, 0.14);
+  box-shadow: 0 14px 40px rgba(15, 23, 42, 0.12);
+}
+html.light .product-card,
+html.light .filter-panel {
+  background: #ffffff;
+  border-color: #e4e2e1;
+  box-shadow: 0 14px 34px rgba(15, 23, 42, 0.06);
+}
+html.light .product-art {
+  background: #f6f3f2;
+  border-color: #e4e2e1;
+}
+html.light .article-body {
+  color: #424654;
+}
+html.light .article-body h2,
+html.light .article-body h3 {
+  color: #1b1c1c;
+}
+html.light .article-body blockquote {
+  background: rgba(0, 69, 165, 0.05);
+  color: #1b1c1c;
+}
 .material-symbols-outlined {
   font-variation-settings: 'FILL' 0, 'wght' 350, 'GRAD' 0, 'opsz' 24;
 }
