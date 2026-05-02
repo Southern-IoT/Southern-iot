@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html class="dark" lang="en">
 <head>
   <meta charset="utf-8"/>
@@ -90,8 +90,11 @@ tailwind.config = {
     <div class="flex items-center gap-3">
       <div class="hidden lg:flex items-center gap-3 text-slate-400" aria-hidden="true">
         <span class="material-symbols-outlined text-xl">language</span>
-        <span class="material-symbols-outlined text-xl">dark_mode</span>
       </div>
+      <button class="theme-toggle nav-theme-toggle" type="button" aria-label="Toggle light and dark mode">
+        <span class="material-symbols-outlined theme-toggle-icon text-xl">light_mode</span>
+        <span class="sr-only theme-toggle-label">Light mode</span>
+      </button>
       <a class="hidden sm:inline-flex bg-primary-container text-white px-5 py-2 rounded-lg font-headline-md text-sm active:scale-95 transform transition-transform hover:shadow-[0_0_15px_rgba(3,168,232,0.4)]" href="../support/">Get Started</a>
       <button id="mobile-menu-btn" class="md:hidden glass-panel rounded-lg p-2 text-white" aria-label="Toggle navigation">
         <span class="material-symbols-outlined">menu</span>
@@ -173,7 +176,10 @@ tailwind.config = {
               <div class="flex items-start justify-between gap-4"><h3 class="font-headline-md text-white">CareFlow V1</h3><span class="font-label-caps text-primary">IIoT</span></div>
               <p class="text-on-surface-variant mt-4 mb-6 flex-1">Generator and power-line monitoring with Modbus RTU, ESP32 processing, RAK3172 LoRaWAN, and 72h offline buffering.</p>
               <div class="space-y-2 text-sm text-on-surface-variant mb-6"><p><span class="material-symbols-outlined text-base align-middle">settings_input_antenna</span> LoRaWAN, 10 km range</p><p><span class="material-symbols-outlined text-base align-middle">database</span> 12+ energy metrics</p><p><span class="material-symbols-outlined text-base align-middle">inventory_2</span> STL enclosure available</p></div>
-              <a class="border border-outline text-center rounded-lg py-3 font-headline-md text-sm text-white hover:border-primary hover:text-primary transition-colors" href="../assets/docs/careflow-v1-iiot-energy-monitor.html">View Details</a>
+              <div class="grid grid-cols-2 gap-3">
+                <a class="border border-outline text-center rounded-lg py-3 font-headline-md text-sm text-white hover:border-primary hover:text-primary transition-colors" href="https://careflow-v1.julfikerhaider2001.workers.dev/#enclosure" target="_blank" rel="noopener">View Demo</a>
+                <a class="border border-outline text-center rounded-lg py-3 font-headline-md text-sm text-white hover:border-primary hover:text-primary transition-colors" href="../assets/models/new-enclosure-design.stl">STL File</a>
+              </div>
             </div>
           </article>
 
@@ -193,7 +199,7 @@ tailwind.config = {
               <div class="flex items-start justify-between gap-4"><h3 class="font-headline-md text-white">Router CNC</h3><span class="font-label-caps text-primary">Machine</span></div>
               <p class="text-on-surface-variant mt-4 mb-6 flex-1">Rigid-frame CNC platform for routing, panel work, prototyping, calibrated motion control, and workshop production.</p>
               <div class="space-y-2 text-sm text-on-surface-variant mb-6"><p><span class="material-symbols-outlined text-base align-middle">precision_manufacturing</span> Stepper motion</p><p><span class="material-symbols-outlined text-base align-middle">architecture</span> Rigid frame</p><p><span class="material-symbols-outlined text-base align-middle">analytics</span> Telemetry-ready workflow</p></div>
-              <a class="border border-outline text-center rounded-lg py-3 font-headline-md text-sm text-white hover:border-primary hover:text-primary transition-colors" href="../assets/docs/cnc-machine-build.html">View Details</a>
+              <a class="border border-outline text-center rounded-lg py-3 font-headline-md text-sm text-white hover:border-primary hover:text-primary transition-colors" href="../support/">Request Details</a>
             </div>
           </article>
 
@@ -213,7 +219,10 @@ tailwind.config = {
               <div class="flex items-start justify-between gap-4"><h3 class="font-headline-md text-white">Pocket Oscilloscope v3</h3><span class="font-label-caps text-primary">Tool</span></div>
               <p class="text-on-surface-variant mt-4 mb-6 flex-1">Portable embedded oscilloscope with RP2040, TFT display, hold mode, calibration workflow, and battery-powered diagnostics.</p>
               <div class="space-y-2 text-sm text-on-surface-variant mb-6"><p><span class="material-symbols-outlined text-base align-middle">memory</span> RP2040 based</p><p><span class="material-symbols-outlined text-base align-middle">desktop_windows</span> ILI9341 TFT</p><p><span class="material-symbols-outlined text-base align-middle">battery_charging_full</span> LiPo charging</p></div>
-              <a class="border border-outline text-center rounded-lg py-3 font-headline-md text-sm text-white hover:border-primary hover:text-primary transition-colors" href="../assets/docs/pocket-oscilloscope-v3.html">View Details</a>
+              <div class="grid grid-cols-2 gap-3">
+                <a class="border border-outline text-center rounded-lg py-3 font-headline-md text-sm text-white hover:border-primary hover:text-primary transition-colors" href="../support/">Request</a>
+                <a class="border border-outline text-center rounded-lg py-3 font-headline-md text-sm text-white hover:border-primary hover:text-primary transition-colors" href="../assets/models/oscilloscope.step">STEP File</a>
+              </div>
             </div>
           </article>
 
@@ -223,7 +232,7 @@ tailwind.config = {
               <div class="flex items-start justify-between gap-4"><h3 class="font-headline-md text-white">Energy Monitoring V2</h3><span class="font-label-caps text-primary">Concept</span></div>
               <p class="text-on-surface-variant mt-4 mb-6 flex-1">Second-generation energy node concept for RAK3173 LoRaWAN, three-phase analytics, antenna tuning, and lower-power operation.</p>
               <div class="space-y-2 text-sm text-on-surface-variant mb-6"><p><span class="material-symbols-outlined text-base align-middle">settings_input_antenna</span> RAK3173 planning</p><p><span class="material-symbols-outlined text-base align-middle">show_chart</span> Three-phase analytics</p><p><span class="material-symbols-outlined text-base align-middle">crisis_alert</span> Anomaly detection</p></div>
-              <a class="border border-outline text-center rounded-lg py-3 font-headline-md text-sm text-white hover:border-primary hover:text-primary transition-colors" href="../assets/docs/energy-monitoring-v2.html">View Details</a>
+              <a class="border border-outline text-center rounded-lg py-3 font-headline-md text-sm text-white hover:border-primary hover:text-primary transition-colors" href="../support/">Request Details</a>
             </div>
           </article>
         </div>
@@ -258,8 +267,8 @@ tailwind.config = {
     </div>
     <div class="flex flex-col gap-4">
       <span class="font-['Space_Grotesk'] text-xs uppercase tracking-widest font-semibold text-blue-500">Contact</span>
-      <div class="text-slate-500 text-xs font-semibold">Sales: +1 (800) IOT-PREC</div>
-      <div class="text-slate-500 text-xs font-semibold">HQ: Austin, TX | Global Operations</div>
+      <div class="text-slate-500 text-xs font-semibold">Email: info@southerniot.com</div>
+      <div class="text-slate-500 text-xs font-semibold">House 26, Road 13, Sector 14, Uttara, Dhaka - 1230, Bangladesh.</div>
     </div>
   </div>
   <div class="max-w-screen-2xl mx-auto px-8 md:px-12 py-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">

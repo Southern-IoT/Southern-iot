@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html class="dark" lang="en">
 <head>
   <meta charset="utf-8"/>
@@ -90,8 +90,11 @@ tailwind.config = {
     <div class="flex items-center gap-3">
       <div class="hidden lg:flex items-center gap-3 text-slate-400" aria-hidden="true">
         <span class="material-symbols-outlined text-xl">language</span>
-        <span class="material-symbols-outlined text-xl">dark_mode</span>
       </div>
+      <button class="theme-toggle nav-theme-toggle" type="button" aria-label="Toggle light and dark mode">
+        <span class="material-symbols-outlined theme-toggle-icon text-xl">light_mode</span>
+        <span class="sr-only theme-toggle-label">Light mode</span>
+      </button>
       <a class="hidden sm:inline-flex bg-primary-container text-white px-5 py-2 rounded-lg font-headline-md text-sm active:scale-95 transform transition-transform hover:shadow-[0_0_15px_rgba(3,168,232,0.4)]" href="../support/">Get Started</a>
       <button id="mobile-menu-btn" class="md:hidden glass-panel rounded-lg p-2 text-white" aria-label="Toggle navigation">
         <span class="material-symbols-outlined">menu</span>
@@ -103,7 +106,7 @@ tailwind.config = {
     <a class="mt-2 bg-primary-container text-white px-4 py-3 rounded-lg text-center" href="../support/">Get Started</a>
   </div>
 </nav>
-<main class="flex-grow pt-24">
+<main class="ecosystem-page flex-grow pt-24">
 <!-- Hero Section -->
 <section class="relative py-20 px-8 overflow-hidden">
 <div class="max-w-screen-2xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
@@ -124,9 +127,9 @@ tailwind.config = {
 </div>
 </div>
 <div class="relative">
-<div class="glass-panel p-8 rounded-3xl relative overflow-hidden group">
-<img alt="Ecosystem Visualization" class="w-full h-[400px] object-cover rounded-2xl opacity-60 group-hover:scale-105 transition-transform duration-700" data-alt="A futuristic network infrastructure visualization with glowing blue nodes and fiber optic connections spanning across a dark, technological background. The image represents the high-speed data flow and connectivity of an industrial IoT ecosystem, featuring deep navy and neon blue accents to match a professional dark-mode UI aesthetic. Precise digital lines intersect to form a complex, reliable web of information." src="https://lh3.googleusercontent.com/aida-public/AB6AXuARM7OaSs1yC3ZzsdkAzdVmHnHgBYYM5m6wCgW_U5sj52PSPeBmg6DDQUuf79fy3V14XKSrx9QLjuhzCveqGYB8TvBL8SAk60Aj8UlEQHDqR3j58FZ-YEHMwoy3ASrATo2Q3fEmQQ74m3LESd5YKrrGvfSB4MUmlGMtMFZs2Bxj6oKL0SennIf-shKwduj5of-gglVnIj0aAQv3gmv__pwzbTeeD7plQQHF_zItw8HcwkJ6sOziKF3VnBrLgOT0aCWizPtz0JuZ4GM"/>
-<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+<div class="ecosystem-visual glass-panel p-8 rounded-3xl relative overflow-hidden group">
+<img alt="Ecosystem Visualization" class="ecosystem-visual-image w-full h-[400px] object-cover rounded-2xl opacity-60 group-hover:scale-105 transition-transform duration-700" data-alt="A futuristic network infrastructure visualization with glowing blue nodes and fiber optic connections spanning across a dark, technological background. The image represents the high-speed data flow and connectivity of an industrial IoT ecosystem, featuring deep navy and neon blue accents to match a professional dark-mode UI aesthetic. Precise digital lines intersect to form a complex, reliable web of information." src="https://lh3.googleusercontent.com/aida-public/AB6AXuARM7OaSs1yC3ZzsdkAzdVmHnHgBYYM5m6wCgW_U5sj52PSPeBmg6DDQUuf79fy3V14XKSrx9QLjuhzCveqGYB8TvBL8SAk60Aj8UlEQHDqR3j58FZ-YEHMwoy3ASrATo2Q3fEmQQ74m3LESd5YKrrGvfSB4MUmlGMtMFZs2Bxj6oKL0SennIf-shKwduj5of-gglVnIj0aAQv3gmv__pwzbTeeD7plQQHF_zItw8HcwkJ6sOziKF3VnBrLgOT0aCWizPtz0JuZ4GM"/>
+<div class="ecosystem-visual-gradient absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
 <div class="absolute bottom-12 left-12 right-12 flex justify-between items-end">
 <div>
 <p class="font-label-caps text-label-caps text-primary mb-1">Global Scale</p>
@@ -345,8 +348,8 @@ tailwind.config = {
     </div>
     <div class="flex flex-col gap-4">
       <span class="font-['Space_Grotesk'] text-xs uppercase tracking-widest font-semibold text-blue-500">Contact</span>
-      <div class="text-slate-500 text-xs font-semibold">Sales: +1 (800) IOT-PREC</div>
-      <div class="text-slate-500 text-xs font-semibold">HQ: Austin, TX | Global Operations</div>
+      <div class="text-slate-500 text-xs font-semibold">Email: info@southerniot.com</div>
+      <div class="text-slate-500 text-xs font-semibold">House 26, Road 13, Sector 14, Uttara, Dhaka - 1230, Bangladesh.</div>
     </div>
   </div>
   <div class="max-w-screen-2xl mx-auto px-8 md:px-12 py-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">

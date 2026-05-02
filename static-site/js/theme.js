@@ -33,20 +33,9 @@
     });
   }
 
-  function addFloatingToggle() {
-    if (document.querySelector(".theme-toggle")) return;
-    const button = document.createElement("button");
-    button.type = "button";
-    button.className = "theme-toggle theme-fab";
-    button.setAttribute("aria-label", "Toggle light and dark mode");
-    button.innerHTML = '<span class="material-symbols-outlined theme-toggle-icon">light_mode</span><span class="theme-toggle-label">Light mode</span>';
-    document.body.appendChild(button);
-  }
-
   setTheme(storedTheme() || "dark");
 
   document.addEventListener("DOMContentLoaded", () => {
-    addFloatingToggle();
     document.querySelectorAll(".theme-toggle").forEach((button) => {
       button.addEventListener("click", () => {
         setTheme(root.classList.contains("light") ? "dark" : "light");

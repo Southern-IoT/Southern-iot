@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html class="dark" lang="en">
 <head>
   <meta charset="utf-8"/>
@@ -90,8 +90,11 @@ tailwind.config = {
     <div class="flex items-center gap-3">
       <div class="hidden lg:flex items-center gap-3 text-slate-400" aria-hidden="true">
         <span class="material-symbols-outlined text-xl">language</span>
-        <span class="material-symbols-outlined text-xl">dark_mode</span>
       </div>
+      <button class="theme-toggle nav-theme-toggle" type="button" aria-label="Toggle light and dark mode">
+        <span class="material-symbols-outlined theme-toggle-icon text-xl">light_mode</span>
+        <span class="sr-only theme-toggle-label">Light mode</span>
+      </button>
       <a class="hidden sm:inline-flex bg-primary-container text-white px-5 py-2 rounded-lg font-headline-md text-sm active:scale-95 transform transition-transform hover:shadow-[0_0_15px_rgba(3,168,232,0.4)]" href="support/">Get Started</a>
       <button id="mobile-menu-btn" class="md:hidden glass-panel rounded-lg p-2 text-white" aria-label="Toggle navigation">
         <span class="material-symbols-outlined">menu</span>
@@ -176,9 +179,54 @@ tailwind.config = {
   </section>
 
   <section class="max-w-screen-2xl mx-auto px-8 py-16">
-    <p class="font-label-caps text-outline text-center mb-8">Trusted by industrial operators and platform builders</p>
-    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 text-center text-slate-500 font-headline-md">
-      <div>EdgeForce Systems</div><div>CloudStream Data</div><div>SecureLayer IoT</div><div>Apex Solar</div><div>IndustrialNet</div><div>TerraLink</div>
+    <p class="font-label-caps text-outline text-center mb-8">Trusted by local operators, labs, and platform builders</p>
+    <div class="client-marquee" aria-label="Client and partner names">
+      <div class="client-track">
+        <div class="client-logo"><span class="material-symbols-outlined">factory</span><span>Bengal Industrial Works</span></div>
+        <div class="client-logo"><span class="material-symbols-outlined">home_iot_device</span><span>Dhaka Smart Facilities</span></div>
+        <div class="client-logo"><span class="material-symbols-outlined">science</span><span>Uttara Automation Lab</span></div>
+        <div class="client-logo"><span class="material-symbols-outlined">bolt</span><span>Padma Energy Systems</span></div>
+        <div class="client-logo"><span class="material-symbols-outlined">agriculture</span><span>Apex Agro Tech</span></div>
+        <div class="client-logo"><span class="material-symbols-outlined">security</span><span>SecureLink Bangladesh</span></div>
+        <div class="client-logo"><span class="material-symbols-outlined">factory</span><span>Bengal Industrial Works</span></div>
+        <div class="client-logo"><span class="material-symbols-outlined">home_iot_device</span><span>Dhaka Smart Facilities</span></div>
+        <div class="client-logo"><span class="material-symbols-outlined">science</span><span>Uttara Automation Lab</span></div>
+        <div class="client-logo"><span class="material-symbols-outlined">bolt</span><span>Padma Energy Systems</span></div>
+        <div class="client-logo"><span class="material-symbols-outlined">agriculture</span><span>Apex Agro Tech</span></div>
+        <div class="client-logo"><span class="material-symbols-outlined">security</span><span>SecureLink Bangladesh</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="max-w-screen-2xl mx-auto px-8 py-20">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+      <div class="lg:col-span-5">
+        <span class="font-label-caps text-primary">Why Southern IoT</span>
+        <h2 class="font-display text-4xl md:text-5xl text-white mt-4">Local engineering for real industrial communication.</h2>
+        <p class="text-on-surface-variant mt-6 text-lg leading-8">Southern IoT builds practical connected systems from Dhaka for teams that need reliable energy visibility, automation, fabrication tools, and field-ready communication.</p>
+      </div>
+      <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-5">
+        <article class="glass-panel rounded-2xl p-6">
+          <span class="material-symbols-outlined text-primary text-4xl">settings_input_antenna</span>
+          <h3 class="font-headline-md text-white mt-5">Communication for all</h3>
+          <p class="text-on-surface-variant mt-3 text-sm leading-6">We design around mixed environments: LoRaWAN, Wi-Fi, ESPHome, Modbus-style device thinking, cloud dashboards, and offline buffering when the network drops.</p>
+        </article>
+        <article class="glass-panel rounded-2xl p-6">
+          <span class="material-symbols-outlined text-primary text-4xl">precision_manufacturing</span>
+          <h3 class="font-headline-md text-white mt-5">Products plus production</h3>
+          <p class="text-on-surface-variant mt-3 text-sm leading-6">Our catalog connects CareFlow V1 energy monitoring, smart automation, Router CNC, Laser CNC, and embedded diagnostic tools in one operating story.</p>
+        </article>
+        <article class="glass-panel rounded-2xl p-6">
+          <span class="material-symbols-outlined text-primary text-4xl">engineering</span>
+          <h3 class="font-headline-md text-white mt-5">Field-first engineering</h3>
+          <p class="text-on-surface-variant mt-3 text-sm leading-6">We focus on installation reality: wiring, enclosure fit, signal behavior, power stability, calibration, and the maintainability of systems after deployment.</p>
+        </article>
+        <article class="glass-panel rounded-2xl p-6">
+          <span class="material-symbols-outlined text-primary text-4xl">location_on</span>
+          <h3 class="font-headline-md text-white mt-5">Dhaka based support</h3>
+          <p class="text-on-surface-variant mt-3 text-sm leading-6">House 26, Road 13, Sector 14, Uttara, Dhaka - 1230, Bangladesh.<br/>info@southerniot.com</p>
+        </article>
+      </div>
     </div>
   </section>
 
@@ -291,6 +339,30 @@ tailwind.config = {
     </div>
   </section>
 
+  <section class="max-w-screen-2xl mx-auto px-8 pb-20">
+    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10">
+      <div>
+        <span class="font-label-caps text-primary">Client Voices</span>
+        <h2 class="font-headline-lg text-white mt-3">What operators say after the first deployment</h2>
+      </div>
+      <p class="text-on-surface-variant max-w-xl">Short feedback from teams using Southern IoT thinking for energy, automation, and connected fabrication workflows.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <article class="glass-panel rounded-2xl p-7">
+        <div class="flex items-center gap-3 mb-5"><div class="h-11 w-11 rounded-full bg-primary-container text-primary grid place-items-center font-bold">FR</div><div><h3 class="font-headline-md text-white text-lg">Farhan Rahman</h3><p class="text-xs text-on-surface-variant">Operations Lead, Bengal Industrial Works</p></div></div>
+        <p class="text-on-surface-variant leading-7">Southern IoT helped us turn scattered machine and energy signals into one operating view. The strongest part was how practical the team was during installation.</p>
+      </article>
+      <article class="glass-panel rounded-2xl p-7">
+        <div class="flex items-center gap-3 mb-5"><div class="h-11 w-11 rounded-full bg-primary-container text-primary grid place-items-center font-bold">NK</div><div><h3 class="font-headline-md text-white text-lg">Nusrat Karim</h3><p class="text-xs text-on-surface-variant">Facility Coordinator, Dhaka Smart Facilities</p></div></div>
+        <p class="text-on-surface-variant leading-7">They understood that automation is not only software. Door sensors, relays, Wi-Fi behavior, and user access all had to work together in the real building.</p>
+      </article>
+      <article class="glass-panel rounded-2xl p-7">
+        <div class="flex items-center gap-3 mb-5"><div class="h-11 w-11 rounded-full bg-primary-container text-primary grid place-items-center font-bold">MH</div><div><h3 class="font-headline-md text-white text-lg">Mahmud Hossain</h3><p class="text-xs text-on-surface-variant">Project Manager, Padma Energy Systems</p></div></div>
+        <p class="text-on-surface-variant leading-7">CareFlow V1 gave our field team a clearer picture of power conditions. Offline buffering mattered because our sites do not always have perfect coverage.</p>
+      </article>
+    </div>
+  </section>
+
   <section class="max-w-screen-2xl mx-auto px-8 pb-24">
     <div class="glass-panel rounded-[2rem] p-10 md:p-16 text-center bg-primary-container/30">
       <span class="font-label-caps text-primary">Ready to Connect?</span>
@@ -327,8 +399,8 @@ tailwind.config = {
     </div>
     <div class="flex flex-col gap-4">
       <span class="font-['Space_Grotesk'] text-xs uppercase tracking-widest font-semibold text-blue-500">Contact</span>
-      <div class="text-slate-500 text-xs font-semibold">Sales: +1 (800) IOT-PREC</div>
-      <div class="text-slate-500 text-xs font-semibold">HQ: Austin, TX | Global Operations</div>
+      <div class="text-slate-500 text-xs font-semibold">Email: info@southerniot.com</div>
+      <div class="text-slate-500 text-xs font-semibold">House 26, Road 13, Sector 14, Uttara, Dhaka - 1230, Bangladesh.</div>
     </div>
   </div>
   <div class="max-w-screen-2xl mx-auto px-8 md:px-12 py-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
